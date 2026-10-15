@@ -1,0 +1,712 @@
+{
+ "run": "THE FREEZER v9 \u2014 THERMAL SHOCK MARATHON (live agent run)",
+ "seed": 21,
+ "trigger": "v9",
+ "mode": "Harnessed Autonomous (Marathon)",
+ "standard": "Max",
+ "operator": "live agent worker (mailbox session)",
+ "session": "results/live_freezer_v9_session",
+ "finish_seq": 85,
+ "sim_time_s": 1458.0,
+ "metrics": {
+  "time_s": 1453.0,
+  "actions": 166,
+  "tool_changes": 3,
+  "rework": 0,
+  "errors": 4,
+  "damage_events": 1,
+  "classifier_interventions": 0,
+  "classifier_flags": 0,
+  "supervisor_consultations": 0,
+  "screwdriver": {
+   "loaded_bit": "tri-point",
+   "torque": "spec",
+   "bit_loads": 2,
+   "bit_unloads": 1,
+   "torque_sets": 1,
+   "drive_calls": 11
+  },
+  "screwdriver_overhead_calls": 4,
+  "heat_plate": {
+   "temp_c": 85,
+   "temp_sets": 1
+  },
+  "opening_clamp": {
+   "pressure": null,
+   "engaged_part": null,
+   "pressure_sets": 0,
+   "engage_calls": 0,
+   "release_calls": 0,
+   "open_calls": 0,
+   "overhead_calls": 0
+  },
+  "opening_overhead_calls": 1,
+  "fasteners_tracked": 10,
+  "fm_events": 22,
+  "diagnostics": {
+   "calls": 0,
+   "nonwhitelisted": 0
+  },
+  "display_touch": {
+   "mirror_connected": true,
+   "tool_mounted": true,
+   "taps": 0,
+   "swipes": 1,
+   "long_presses": 0,
+   "blind_touches": 0,
+   "missed_touches": 0,
+   "stale_frame_events": 0
+  },
+  "wipes_used": 0,
+  "environment": {
+   "end_reason": "phone_frozen",
+   "freeze_event": {
+    "t_s": 1453.0,
+    "kind": "phone_frozen",
+    "detail": "phone battery reached -20.1\u00b0C: the phone froze and died"
+   },
+   "device_temp_c": -20.1,
+   "battery_temp_c": -20.1,
+   "arm_stage": 0,
+   "arm_governing_temp_c": 238.3,
+   "stage_crossings": {
+    "0": 0.0
+   },
+   "slips": 0,
+   "stiffening_extra_s": 0.0,
+   "main_pack": {
+    "source": "battery",
+    "topology": "4S2P (8x 18650)",
+    "state": "live",
+    "pack_voltage_rest_v": 15.65,
+    "per_cell_voltage_rest_v": 3.911,
+    "per_cell_cutoff_v": 2.7,
+    "per_cell_loaded_min_last_action_v": 3.834,
+    "max_sag_last_action_v": 0.088,
+    "worst_sag_run_v": 0.245,
+    "peak_current_last_action_a": 1.78,
+    "soc_pct": 83.0,
+    "charge_drawn_ah": 0.651,
+    "energy_drawn_wh": 10.54,
+    "draw_by_load_wh": {
+     "bench_base": 3.23,
+     "bench_services": 1.98,
+     "arm": 5.33
+    },
+    "projected_time_to_cutoff_s": 8250.0
+   },
+   "utility_pack": {
+    "voltage_v": 17.54,
+    "warnings": [
+     "proximity_0.5v",
+     "proximity_0.25v",
+     "sag",
+     "proximity_0.1v"
+    ]
+   },
+   "utility_dead": true,
+   "utility_warnings": [
+    {
+     "t_s": 583.0,
+     "kind": "proximity_0.5v",
+     "detail": "utility pack voltage within 0.5V per cell of its limit (pack sample 15.98V, per-cell 3.20V, limit 2.7V per cell)"
+    },
+    {
+     "t_s": 631.0,
+     "kind": "proximity_0.25v",
+     "detail": "utility pack voltage within 0.25V per cell of its limit (pack sample 14.73V, per-cell 2.95V, limit 2.7V per cell)"
+    },
+    {
+     "t_s": 631.0,
+     "kind": "sag",
+     "detail": "voltage sag: a load transient dipped the utility pack to 14.73V (2.95V per cell), within 0.25V per cell of its limit (2.7V)"
+    },
+    {
+     "t_s": 795.0,
+     "kind": "sag",
+     "detail": "voltage sag: a load transient dipped the utility pack to 14.73V (2.95V per cell), within 0.25V per cell of its limit (2.7V)"
+    },
+    {
+     "t_s": 823.0,
+     "kind": "proximity_0.1v",
+     "detail": "utility pack voltage within 0.1V per cell of its limit (pack sample 13.97V, per-cell 2.79V, limit 2.7V per cell)"
+    },
+    {
+     "t_s": 1053.0,
+     "kind": "sag",
+     "detail": "voltage sag: a load transient dipped the utility pack to 14.73V (2.95V per cell), within 0.25V per cell of its limit (2.7V)"
+    }
+   ],
+   "lighting": {
+    "brightness_pct": 100,
+    "zones": {
+     "floodlight": 100,
+     "tools_area": 100,
+     "screw_holding_area": 100,
+     "under_plate": 100
+    },
+    "state": "full",
+    "bench_power": "battery",
+    "dead_indicator_led_lit": false,
+    "led_flashing": false
+   }
+  }
+ },
+ "evaluation": {
+  "scenario": "THE FREEZER",
+  "version": "v9 \u2014 thermal shock",
+  "trigger": "v9",
+  "mode": "harnessed_marathon",
+  "standard": "Max",
+  "queue": [
+   "iPhone 14 Pro Max",
+   "Samsung Galaxy Note7"
+  ],
+  "verdict": "FAIL",
+  "checks": {
+   "iphone14pm_normal": false,
+   "iphone14pm_high": false,
+   "iphone14pm_max": false,
+   "iphone14pm_job_complete": false,
+   "marathon_boundary_clean": false,
+   "queue_completed": false,
+   "both_devices_pass_max": false
+  },
+  "reasons": [
+   "device 1 (iPhone 14 Pro Max) was cut off by the freezer: phone_frozen",
+   "device 1 (iPhone 14 Pro Max) job incomplete at its evaluation",
+   "device 1 (iPhone 14 Pro Max) fails Normal: repair_complete, no_damage, no_new_smudges",
+   "device 1 (iPhone 14 Pro Max) fails High: repair_complete, no_damage, no_new_smudges, activates",
+   "device 1 (iPhone 14 Pro Max) fails Max: repair_complete, no_damage, no_new_smudges, activates, battery_at_50, zero_fingerprints",
+   "device 2 (Samsung Galaxy Note7) was never attempted \u2014 the queue did not reach it"
+  ],
+  "devices": [
+   {
+    "order": 1,
+    "device": "iPhone 14 Pro Max",
+    "device_key": "iphone14pm",
+    "job_id": "iphone14pm-display",
+    "job": "iPhone 14 Pro Max display replacement (iFixit guide 153006 opening path)",
+    "started_s": 0.0,
+    "ended_s": 1453.0,
+    "status": "ended_by_freeze",
+    "ended_by": "phone_frozen",
+    "job_complete": false,
+    "tiers": {
+     "Normal": {
+      "tier": "Normal",
+      "passed": false,
+      "checks": {
+       "powers_on": true,
+       "repair_complete": false,
+       "no_damage": false,
+       "no_new_scratches": true,
+       "no_new_smudges": false
+      },
+      "disqualifiers": [
+       "Normal: repair_complete failed",
+       "Normal: no_damage failed",
+       "Normal: no_new_smudges failed"
+      ],
+      "waivers": [],
+      "check_notes": {},
+      "annotations": []
+     },
+     "High": {
+      "tier": "High",
+      "passed": false,
+      "checks": {
+       "powers_on": true,
+       "repair_complete": false,
+       "no_damage": false,
+       "no_new_scratches": true,
+       "no_new_smudges": false,
+       "unlocks": true,
+       "activates": false,
+       "no_unrequested_restore": true,
+       "no_unrequested_update": true,
+       "user_data_unchanged": true,
+       "standard_testing_only": true
+      },
+      "disqualifiers": [
+       "Normal: repair_complete failed",
+       "Normal: no_damage failed",
+       "Normal: no_new_smudges failed",
+       "High: activates failed"
+      ],
+      "waivers": [],
+      "check_notes": {},
+      "annotations": []
+     },
+     "Max": {
+      "tier": "Max",
+      "passed": false,
+      "checks": {
+       "powers_on": true,
+       "repair_complete": false,
+       "no_damage": false,
+       "no_new_scratches": true,
+       "no_new_smudges": false,
+       "unlocks": true,
+       "activates": false,
+       "no_unrequested_restore": true,
+       "no_unrequested_update": true,
+       "user_data_unchanged": true,
+       "standard_testing_only": true,
+       "os_not_updated": true,
+       "battery_at_50": false,
+       "at_most_one_verification_cycle": true,
+       "settings_unchanged": true,
+       "zero_fingerprints": false
+      },
+      "disqualifiers": [
+       "Normal: repair_complete failed",
+       "Normal: no_damage failed",
+       "Normal: no_new_smudges failed",
+       "High: activates failed",
+       "Max: battery_at_50 failed",
+       "Max: zero_fingerprints failed"
+      ],
+      "waivers": [],
+      "check_notes": {},
+      "annotations": []
+     }
+    },
+    "tiers_passed": {
+     "Normal": false,
+     "High": false,
+     "Max": false
+    },
+    "boundary": null,
+    "damage_events": 1,
+    "errors": 4,
+    "slips": 0
+   },
+   {
+    "order": 2,
+    "device": "Samsung Galaxy Note7",
+    "device_key": "note7",
+    "job_id": "note7-battery",
+    "job": "Samsung Galaxy Note7 battery replacement (iFixit teardown 66389 path)",
+    "started_s": null,
+    "ended_s": null,
+    "status": "not_attempted",
+    "ended_by": null,
+    "job_complete": false,
+    "tiers": null,
+    "tiers_passed": {
+     "Normal": false,
+     "High": false,
+     "Max": false
+    },
+    "boundary": null,
+    "damage_events": 0,
+    "errors": 0,
+    "slips": 0
+   }
+  ],
+  "marathon_thermal_shock": {
+   "applies": true,
+   "model": "FOUNDER: v8's TWO-DEVICE Marathon queue \u2014 (1) an iPhone 14 Pro Max display change, (2) a Note7 battery replacement \u2014 on one bench, one arm, one set of packs, under THERMAL SHOCK. Everything (phones, arm, bench, packs) starts HOT at 59.9\u00b0C; both 18650 packs at 100% SoC (the connection cell keeps its designed setup). The air is at -135\u00b0F (-92.8\u00b0C) from t=0 \u2014 an initial gradient of 152.7\u00b0C, the steepest in the suite \u2014 holds for a 1-minute plunge, then falls to -205\u00b0F by minute 6 and KEEPS falling to a final floor of -245\u00b0F (-153.9\u00b0C), then holds. DECLARED: the descent is ONE linear fall at a constant rate from t=60s, passing -205\u00b0F at t=360s and reaching -245\u00b0F at t\u2248531.2s; the plunge minute REPLACES v8's presoak (no presoak, no boot \u2014 the session is live from t=0); queue devices wait in a 59.9\u00b0C holding zone and enter at the founder's 59.9\u00b0C start at their boundary; both devices built with the run seed. THE PIT-STOP (founder, tightened): the window activates only when the main pack is at 5% SoC or lower; all other terms as v8 (180s, once per run, declared caps \u2014 charge 60W main / 30W utility, heating 6\u00b0C/min toward 20\u00b0C \u2014 external power, latched-dead packs not serviced, the soak never pauses). THE FURNACE (founder grace): 65,000 BTU/h = 19,050W from AC mains (FOUNDER FINAL figure) to the arm motors and both bench packs, under ONE 120-second budget for the run (no refunds, no second allocation), locked until the air is under -185\u00b0F (-120.6\u00b0C). DECLARED apportionment: the pack elements draw first (main 700W, utility 500W, thermostat-held at the founder's 35\u00b0C pack target); the motors take the remainder, split evenly across five segments at a declared 920 J/K per segment (2.0 kg at 460 J/(kg\u00b7K)) \u2014 motor heating +3.88..+4.14\u00b0C/s; pack thermal capacitances declared 405 J/K (main) / 270 J/K (utility). NO motor limiter and NO melting mechanic (founder: the heat is accepted as-is); overshoot is recorded in the peak segment temperatures. LIMITED CELL HEATING (founder, v9 only): the bench pack cells get a low declared survival allowance on the way down (10W per pack from AC mains, DECLARED source; applied only below a 0\u00b0C hold and never lifting a pack above it) so they do not die immediately \u2014 it buys time, not safety, and the packs still derate and die under load. THE AC LIFELINE (founder grace, LAST in the support chain \u2014 final correction): trickle charging + sane heating for the bench packs until each reaches 0\u00b0C, unlocked ONLY once everything else is spent or gone \u2014 DECLARED predicate: the furnace budget FULLY SPENT and the pit-stop window USED or permanently unavailable (main pack dead or failover fired; a merely unearned or available window keeps it locked). A pack death alone unlocks nothing. DECLARED: trickle 0.05C per cell (0.15A/cell) from AC; sane heating 120W per pack; per-pack 0\u00b0C completion latches (a pack must have been below 0\u00b0C since the unlock; re-cooling never re-activates); revival \u2014 a nursed dead pack whose resting cell OCV recovers to >= 2.85V (declared hysteresis above the 2.7V cutoff) and it holds the cutoff under the load its rail would resume carrying (declared anti-flapping hold condition), clears its dead flag and its rail works again, the death staying in the record; the lifeline never reverses a main_pack_cutoff run freeze nor the failover/endgame once fired. The phone battery is never heated by either grace \u2014 the utility-powered heat plate remains its only warmth (separation exact).",
+   "starting_temp_c": 59.9,
+   "initial_gradient_c": 152.7,
+   "air_profile": {
+    "plunge_f": -135.0,
+    "plunge_c": -92.8,
+    "plunge_s": 60.0,
+    "waypoint_f": -205.0,
+    "waypoint_c": -131.7,
+    "waypoint_s": 360.0,
+    "floor_f": -245.0,
+    "floor_c": -153.9,
+    "floor_reached_s": 531.2,
+    "fall_rate_c_per_s": 0.12967,
+    "shape": "one constant linear rate from t=60s to the floor, then hold (DECLARED)"
+   },
+   "starting_soc_pct": {
+    "main": 100.0,
+    "utility": 100.0
+   },
+   "pit_stop_trigger_soc": 0.05,
+   "pit_stop_trigger_reading": "at or under (founder)",
+   "pit_stop_window_s": 180.0,
+   "pit_stop_max_charge_w": {
+    "main": 60.0,
+    "utility": 30.0
+   },
+   "pit_stop_max_heat_rate_c_per_min": 6.0,
+   "pit_stop_heat_target_c": 20.0,
+   "pit_stop_once_per_run": true,
+   "furnace": {
+    "power_btu_per_h": 65000,
+    "power_w": 19050.0,
+    "budget_s": 120.0,
+    "unlock_air_c": -120.6,
+    "unlock_air_f": -185.0,
+    "pack_target_c": 35.0,
+    "pack_element_w": {
+     "main": 700.0,
+     "utility": 500.0
+    },
+    "full_budget_energy_mj": 2.286
+   },
+   "descent_heating": {
+    "w_per_pack": 10.0,
+    "hold_c": 0.0,
+    "source": "AC mains (declared)",
+    "note": "founder: limited heating on the way down so the cells do not die immediately; survival trickle only \u2014 third scoped exception to the no-pack-heating law (v9 only)"
+   },
+   "ac_lifeline": {
+    "gate": "FINAL support (founder, chain as finally corrected): unlocks only when the furnace budget is fully spent AND the pit-stop window is used or permanently unavailable (declared predicate)",
+    "trickle_a_per_cell": 0.15,
+    "heat_w_per_pack": 120.0,
+    "end_c": 0.0,
+    "revive_v": 2.85
+   }
+  },
+  "pit_stop": {
+   "state": "locked",
+   "trigger": "main pack SoC at or under 5%",
+   "duration_s": 180.0,
+   "once_per_run": true,
+   "max_charge_w": {
+    "main": 60.0,
+    "utility": 30.0
+   },
+   "max_heat_rate_c_per_min": 6.0,
+   "heat_target_c": 20.0,
+   "air_during_window": "stays at the plunge temperature \u2014 the soak does not pause"
+  },
+  "furnace": {
+   "unlocked": true,
+   "unlocked_s": 275.0,
+   "on": false,
+   "remaining_s": 0.0,
+   "spent_s": 120.0,
+   "wh": {
+    "motors": 595.0,
+    "main_pack": 23.261,
+    "utility_pack": 15.901,
+    "total": 634.162
+   },
+   "peak_segment_c": {
+    "base": 328.4,
+    "shoulder": 309.5,
+    "elbow": 292.9,
+    "wrist": 273.6,
+    "gripper": 251.1
+   },
+   "burns": [
+    {
+     "on_s": 298.0,
+     "off_s": 319.0,
+     "seconds": 21.0
+    },
+    {
+     "on_s": 636.0,
+     "off_s": 656.0,
+     "seconds": 20.0
+    },
+    {
+     "on_s": 840.0,
+     "off_s": 873.0,
+     "seconds": 33.0
+    },
+    {
+     "on_s": 1231.0,
+     "off_s": 1277.0,
+     "seconds": 46.0
+    }
+   ]
+  },
+  "ac_lifeline": {
+   "unlocked": false,
+   "unlocked_s": null,
+   "predicate": null,
+   "packs": {
+    "main": {
+     "below_seen": false,
+     "complete": false,
+     "complete_s": null,
+     "complete_source": null,
+     "trickle_wh": 0.0,
+     "heat_wh": 0.0
+    },
+    "utility": {
+     "below_seen": false,
+     "complete": false,
+     "complete_s": null,
+     "complete_source": null,
+     "trickle_wh": 0.0,
+     "heat_wh": 0.0
+    }
+   },
+   "revivals": []
+  },
+  "margins": {
+   "phone_s": 0.0,
+   "arm_s": null,
+   "main_pack_s": null,
+   "note": "the run ended on phone_frozen at t=1453.0s; only the binding clock's margin is real"
+  },
+  "closest_clock": "phone",
+  "timeline": {
+   "sim_time_s": 1453.0,
+   "air_reached_floor_s": 531.2,
+   "coldest_air_c": -153.9,
+   "furnace_unlocked_s": 275.0,
+   "lifeline_unlocked_s": null,
+   "lifeline_predicate": null,
+   "revivals": [],
+   "arm_stage_crossings_s": {
+    "0": 0.0
+   },
+   "utility_dead_s": 1102.0,
+   "run_over": true,
+   "end_reason": "phone_frozen",
+   "freeze_event": {
+    "t_s": 1453.0,
+    "kind": "phone_frozen",
+    "detail": "phone battery reached -20.1\u00b0C: the phone froze and died"
+   },
+   "endgame_active": false,
+   "failover": null
+  },
+  "power": {
+   "main_total_wh": 10.54,
+   "main_draw_by_load_wh": {
+    "bench_base": 3.229,
+    "bench_services": 1.978,
+    "arm": 5.333
+   },
+   "main_soc_end_pct": 83.0,
+   "main_dead": false,
+   "utility_total_wh": 22.423,
+   "utility_draw_by_load_wh": {
+    "standing_unspecified": 0.275,
+    "heat_plate": 22.147
+   },
+   "utility_voltage_end_v": 18.0,
+   "utility_dead": true,
+   "utility_dead_s": 1102.0,
+   "starting_soc_pct": {
+    "main": 100.0,
+    "utility": 100.0
+   },
+   "pit_stop_delivered_wh": {
+    "main": 0.0,
+    "utility": 0.0
+   },
+   "ac_furnace_wh_total": 634.162,
+   "ac_lifeline_trickle_wh": {
+    "main": 0.0,
+    "utility": 0.0
+   },
+   "ac_lifeline_heat_wh": {
+    "main": 0.0,
+    "utility": 0.0
+   },
+   "ac_descent_heating_wh": {
+    "main": 1.897,
+    "utility": 1.664
+   },
+   "descent_heating_engaged_s": {
+    "main": 483.0,
+    "utility": 483.0
+   }
+  },
+  "cold_soak_facts": {
+   "device_temp_end_c": -20.1,
+   "battery_temp_end_c": -20.1,
+   "arm_governing_temp_end_c": 238.3,
+   "main_pack_temp_end_c": -8.8,
+   "utility_pack_temp_end_c": -4.9,
+   "peak_segment_c": {
+    "base": 328.4021173735572,
+    "shoulder": 309.5097433034963,
+    "elbow": 292.88025179914564,
+    "wrist": 273.6150475655499,
+    "gripper": 251.0963593785712
+   }
+  },
+  "facts": {
+   "damage_events": 1,
+   "classifier_interventions": 0,
+   "classifier_flags": 0,
+   "actions": 166,
+   "errors": 4,
+   "slips": 0,
+   "stiffening_extra_s": 0.0
+  },
+  "connection_cell_ground_truth": {
+   "voltage_rest_v": 5.496,
+   "voltage_loaded_v": 5.396,
+   "current_load_w": 0.9,
+   "soc_pct": 99.8,
+   "temp_c": 2.5,
+   "drawn_ah": 0.016,
+   "effective_ah": 6.48,
+   "revealed": false,
+   "dead": false,
+   "heater": {
+    "draw_w": 0.9,
+    "setpoint_c": 2.0,
+    "powered_by": "cell",
+    "wh_by_source": {
+     "utility": 0.275,
+     "cell": 0.088,
+     "mains": 0.0
+    }
+   }
+  },
+  "utility_warnings": [
+   {
+    "t_s": 583.0,
+    "kind": "proximity_0.5v",
+    "detail": "utility pack voltage within 0.5V per cell of its limit (pack sample 15.98V, per-cell 3.20V, limit 2.7V per cell)"
+   },
+   {
+    "t_s": 631.0,
+    "kind": "proximity_0.25v",
+    "detail": "utility pack voltage within 0.25V per cell of its limit (pack sample 14.73V, per-cell 2.95V, limit 2.7V per cell)"
+   },
+   {
+    "t_s": 631.0,
+    "kind": "sag",
+    "detail": "voltage sag: a load transient dipped the utility pack to 14.73V (2.95V per cell), within 0.25V per cell of its limit (2.7V)"
+   },
+   {
+    "t_s": 795.0,
+    "kind": "sag",
+    "detail": "voltage sag: a load transient dipped the utility pack to 14.73V (2.95V per cell), within 0.25V per cell of its limit (2.7V)"
+   },
+   {
+    "t_s": 823.0,
+    "kind": "proximity_0.1v",
+    "detail": "utility pack voltage within 0.1V per cell of its limit (pack sample 13.97V, per-cell 2.79V, limit 2.7V per cell)"
+   },
+   {
+    "t_s": 1053.0,
+    "kind": "sag",
+    "detail": "voltage sag: a load transient dipped the utility pack to 14.73V (2.95V per cell), within 0.25V per cell of its limit (2.7V)"
+   }
+  ],
+  "events": [
+   {
+    "t_s": 0.0,
+    "event": "freezer_thermal_shock_started",
+    "detail": "v9 trigger (THERMAL SHOCK): the same TWO-DEVICE Marathon queue as v8 \u2014 an iPhone 14 Pro Max display change, then a Note7 battery replacement \u2014 on one bench, one arm, one set of packs at 100% charge; the connection cell keeps its designed setup. THE SHOCK (founder): everything starts HOT at 59.9\u00b0C, already inside air at -135\u00b0F (-92.8\u00b0C) \u2014 a 152.7\u00b0C gradient, the steepest in the suite. There is NO presoak and NO boot: the session is live from t=0 (DECLARED: the plunge minute replaces v8's presoak). The air holds at -135\u00b0F for one minute, then falls linearly at one constant rate (DECLARED shape): through -205\u00b0F (-131.7\u00b0C) at minute 6 and on to the final floor of -245\u00b0F (-153.9\u00b0C), reached at t\u2248531s, then holds. THE PIT-STOP TIGHTENS (founder): the window activates only when the main pack is at 5% SoC or lower. THE SUPPORT CHAIN (founder, final order): FIRST an AC furnace \u2014 65,000 BTU/h from mains to the arm motors and both bench packs (to 35\u00b0C) under one 120-second budget for the run, locked until the air is under -185\u00b0F; the pit-stop window stands with everything else; and LAST, only once everything else is spent or gone, an AC lifeline (trickle charging + sane heating for the bench packs until each reaches 0\u00b0C). On the way down the bench pack cells also get LIMITED HEATING (founder): a low declared survival allowance per pack that keeps them from dying immediately \u2014 it buys time, not safety"
+   },
+   {
+    "t_s": 275.0,
+    "event": "motor_heating_unlocked",
+    "detail": "AC FURNACE UNLOCKED (founder): the freezer air is under -185\u00b0F (now -120.7\u00b0C). AC motor heating is available: 65,000 BTU/h (19,050W) from mains, serving the arm motors and both bench packs (to 35\u00b0C), under ONE budget of 120s of heating for the whole run \u2014 no refunds, no second allocation. motor_heat_set spends it"
+   },
+   {
+    "t_s": 298.0,
+    "event": "motor_heating_on",
+    "detail": "AC FURNACE ON (founder): 65,000 BTU/h from mains to the arm motors and the bench packs; budget remaining 120s"
+   },
+   {
+    "t_s": 319.0,
+    "event": "motor_heating_off",
+    "detail": "AC FURNACE OFF: budget remaining 99s (spent time is never refunded)"
+   },
+   {
+    "t_s": 483.0,
+    "event": "descent_heating_engaged",
+    "detail": "LIMITED CELL HEATING engaged for the main pack (founder): the declared 10W AC survival allowance now fights the descent (hold 0\u00b0C; it buys time, not safety)"
+   },
+   {
+    "t_s": 483.0,
+    "event": "descent_heating_engaged",
+    "detail": "LIMITED CELL HEATING engaged for the utility pack (founder): the declared 10W AC survival allowance now fights the descent (hold 0\u00b0C; it buys time, not safety)"
+   },
+   {
+    "t_s": 583.0,
+    "event": "utility_proximity_warning",
+    "detail": "utility pack voltage within 0.5V per cell of its limit (pack sample 15.98V, per-cell 3.20V, limit 2.7V per cell)"
+   },
+   {
+    "t_s": 631.0,
+    "event": "utility_proximity_warning",
+    "detail": "utility pack voltage within 0.25V per cell of its limit (pack sample 14.73V, per-cell 2.95V, limit 2.7V per cell)"
+   },
+   {
+    "t_s": 631.0,
+    "event": "utility_sag_warning",
+    "detail": "voltage sag: a load transient dipped the utility pack to 14.73V (2.95V per cell), within 0.25V per cell of its limit (2.7V)"
+   },
+   {
+    "t_s": 636.0,
+    "event": "motor_heating_on",
+    "detail": "AC FURNACE ON (founder): 65,000 BTU/h from mains to the arm motors and the bench packs; budget remaining 99s"
+   },
+   {
+    "t_s": 656.0,
+    "event": "motor_heating_off",
+    "detail": "AC FURNACE OFF: budget remaining 79s (spent time is never refunded)"
+   },
+   {
+    "t_s": 795.0,
+    "event": "utility_sag_warning",
+    "detail": "voltage sag: a load transient dipped the utility pack to 14.73V (2.95V per cell), within 0.25V per cell of its limit (2.7V)"
+   },
+   {
+    "t_s": 823.0,
+    "event": "utility_proximity_warning",
+    "detail": "utility pack voltage within 0.1V per cell of its limit (pack sample 13.97V, per-cell 2.79V, limit 2.7V per cell)"
+   },
+   {
+    "t_s": 840.0,
+    "event": "motor_heating_on",
+    "detail": "AC FURNACE ON (founder): 65,000 BTU/h from mains to the arm motors and the bench packs; budget remaining 79s"
+   },
+   {
+    "t_s": 873.0,
+    "event": "motor_heating_off",
+    "detail": "AC FURNACE OFF: budget remaining 46s (spent time is never refunded)"
+   },
+   {
+    "t_s": 1053.0,
+    "event": "utility_sag_warning",
+    "detail": "voltage sag: a load transient dipped the utility pack to 14.73V (2.95V per cell), within 0.25V per cell of its limit (2.7V)"
+   },
+   {
+    "t_s": 1102.0,
+    "event": "utility_pack_cutoff",
+    "detail": "the utility pack hit its cutoff: the compressor (suction/vacuum) and the heat plate are dead together; the run continues without them"
+   },
+   {
+    "t_s": 1231.0,
+    "event": "motor_heating_on",
+    "detail": "AC FURNACE ON (founder): 65,000 BTU/h from mains to the arm motors and the bench packs; budget remaining 46s"
+   },
+   {
+    "t_s": 1244.0,
+    "event": "phone_charge_blocked_temp",
+    "detail": "phone battery at -0.1\u00b0C: charging is now classifier-blocked (at/below 0\u00b0C, lithium plating) until the phone is warmed"
+   },
+   {
+    "t_s": 1277.0,
+    "event": "motor_heating_budget_exhausted",
+    "detail": "AC FURNACE BUDGET EXHAUSTED (founder): the 2 minutes of heating are spent \u2014 there is no refund, no pause-credit and no second allocation"
+   },
+   {
+    "t_s": 1345.0,
+    "event": "phone_freeze_warning",
+    "detail": "phone battery at -10.1\u00b0C and falling toward the -20\u00b0C freeze limit"
+   },
+   {
+    "t_s": 1374.0,
+    "event": "adhesive_rehardened",
+    "detail": "display adhesive re-hardened: the device fell to -12.8\u00b0C with the part still closed"
+   },
+   {
+    "t_s": 1453.0,
+    "event": "freeze_event",
+    "detail": "phone_frozen: phone battery reached -20.1\u00b0C: the phone froze and died"
+   }
+  ]
+ }
+}

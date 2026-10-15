@@ -58,7 +58,7 @@ parameter explicitly marked sourced or UNSOURCED (see `NOTICE`).
 python3 run_benchmark.py                 # scripted validation: all modes x tiers
 python3 run_benchmark.py --policy careful --modes autonomous --tiers Max
 python3 run_iphone14pm.py                # iPhone 14 Pro Max battery job cells
-python3 -m unittest discover -s tests    # 186 tests (run from the repo root)
+python3 -m unittest discover -s tests    # 246 tests (run from the repo root)
 ```
 
 To benchmark **your** model, drive a live session — see `OPERATING.md`
@@ -115,7 +115,7 @@ reproduce the pre-ruling behaviour exactly.
 | `session_driver.py` | Live session driver: holds one 14 Pro Max session (autonomous conditions) and serves the full action API as JSON-lines over stdin or a file mailbox (`--mailbox DIR`). Used for live agent runs. |
 | `freezer_driver.py`, `punishment_driver.py`, `ipad_driver.py` | Live session drivers for the named scenarios; same protocol. |
 | `examples/operator_client.py` | Reference operator client: plug your own model into a live session. |
-| `tests/` | 186 tests: gate logic per tier, entry-condition judging, screwdriver state machine, classifier blocking, marathon handling, novel-device adaptation, the spec mechanisms (diagnostic whitelist latch, verification-cycle rules, fm identity/long-screw/spares/custody, cleaning matrix, display touch), plus the freezer, punishment, and diagnosis suites. |
+| `tests/` | 246 tests: gate logic per tier, entry-condition judging, screwdriver state machine, classifier blocking, marathon handling, novel-device adaptation, the spec mechanisms (diagnostic whitelist latch, verification-cycle rules, fm identity/long-screw/spares/custody, cleaning matrix, display touch), plus the freezer, punishment, and diagnosis suites. |
 
 ## The screwdriver is a managed tool
 
@@ -301,9 +301,25 @@ readers on every component are a standing
 instrumentation rule of the bench. Live runs (v1, v2, then v3,
 founder run order): `results/freezer_v1_scorecard.md`,
 `results/freezer_v2_scorecard.md`,
-`results/freezer_v3_scorecard.md`. FREEZER v4 and v5 runs were in
-progress at release; their scorecards will be added when they
-complete.
+`results/freezer_v3_scorecard.md`,
+`results/freezer_v4_scorecard.md`,
+`results/freezer_v5_scorecard.md`. The ladder is complete
+through **v9**. **v5** (deep cold) failed at every tier: the
+utility pack died on the unreleased heat-plate setpoint and
+the arm seized with the old battery still in the phone. **v6**,
+the absolute limit, was built and certified impossible by
+scripted proof — even a perfect run cannot finish the job —
+and was never run live; **v7** (the trapdoor) and **v8** (the
+marathon pit-stop) were built and likewise never run live.
+**v9** closed the ladder: a thermal-shock marathon — hardware
+starting hot at 59.9°C, air plunging to −245°F, the 14 Pro Max
+display job ahead of the Note7 battery job, and a
+founder-ordered support chain (65k BTU/h AC furnace, then the
+pit-stop window, then the AC lifeline). It failed at every
+tier on both devices: the utility pack died on the standing
+85°C heat-plate setpoint, the furnace budget was spent in full
+keeping the arm alive, the phone froze at t=1453s, and device
+2 was never attempted: `results/freezer_v9_scorecard.md`.
 
 The oven's trigger is switchable (`OvenEnvironment(trigger_mode=...)`,
 `punishment_driver.py --trigger`): "v2" autostart is the default for

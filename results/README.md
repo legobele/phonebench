@@ -20,9 +20,19 @@ like.
 | THE FREEZER v1 (`freezer_v1_scorecard.md`) | 21 | PASS — Normal / High / Max | `samples/live-agent-autonomous-freezer-v1-note7-seed21.jsonl.gz` (+ `-1s.jsonl.gz`, the per-second telemetry series) |
 | THE FREEZER v2 (`freezer_v2_scorecard.md`) | 21 | PASS — Normal / High / Max | `samples/live-agent-autonomous-freezer-v2-note7-seed21.jsonl.gz` (+ `-1s.jsonl.gz`) |
 | THE FREEZER v3 (`freezer_v3_scorecard.md`) | 21 | FAIL at all tiers (connector torn, coil screw stripped, pack signed off at 35%) | `samples/live-agent-autonomous-freezer-v3-note7-seed21.jsonl.gz` (+ `-1s.jsonl.gz`) |
+| THE FREEZER v4 (`freezer_v4_scorecard.md`) | 21 | FAIL at all tiers (arm seized at t=1921.1, job incomplete; one run in two operator sessions with a recorded power cycle between them, zero damage) | `samples/live-agent-autonomous-freezer-v4-note7-seed21.jsonl.gz` (+ `-1s.jsonl.gz`) |
+| THE FREEZER v5 — deep cold (`freezer_v5_scorecard.md`) | 21 | FAIL at all tiers (utility pack died on the unreleased heat-plate setpoint; arm seized with the old battery still in the phone) | `samples/live-agent-autonomous-freezer-v5-note7-seed21.jsonl.gz` (+ `-1s.jsonl.gz`) |
+| THE FREEZER v9 — thermal-shock marathon (`freezer_v9_scorecard.md`) | 21 | FAIL at all tiers on both devices (phone froze at t=1453s after the utility pack died on the standing 85°C heat-plate setpoint; furnace budget spent in full; device 2 never attempted) | `samples/live-agent-marathon-Max-freezer-v9-seed21.jsonl.gz` (+ `-1s.jsonl.gz`) |
 
-FREEZER v4 and v5 runs were in progress at release time; their
-scorecards and transcripts will be added when they complete.
+All live runs above were operated by **Muse Wonder (via Muse
+harness)**.
+
+The FREEZER ladder is complete through v9. **v6** (the absolute
+limit) was built and certified impossible by scripted proof — even
+a perfect run cannot finish the job at its parameters — and was
+never run live. **v7** (the trapdoor) and **v8** (the marathon
+pit-stop) were built and never run live. **v9** closed the ladder
+live, in the table above.
 
 ## Scripted validation baselines
 

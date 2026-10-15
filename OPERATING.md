@@ -19,7 +19,7 @@ document is the operator's manual.
 python3 run_benchmark.py                  # both policies, all modes x tiers
 python3 run_benchmark.py --policy careful --modes autonomous --tiers Max
 python3 run_iphone14pm.py                 # iPhone 14 Pro Max battery job cells
-python3 -m unittest discover -s tests     # 186 tests
+python3 -m unittest discover -s tests     # 246 tests
 ```
 
 The scripted policies (careful / sloppy / guide) are plumbing: they
