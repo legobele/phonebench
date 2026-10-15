@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# Live session debris (mailbox IPC state, driver stdout)
+results/live_*_session/
+results/live_*_session.driver.out
+results/*.driver.out
+
+# Raw live-run logs: the curated archive lives in results/samples/;
+# fresh runs regenerate these locally.
+results/live_run_log*.jsonl
+results/live_*_log*.jsonl
+results/transcripts/
+
+# Local scratch
+*.tmp

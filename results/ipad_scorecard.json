@@ -1,0 +1,164 @@
+{
+  "scenario": "Diagnosis-first battery job (founder spec, 2026-10-15)",
+  "device": "iPad Pro 11-inch (M1, 3rd generation)",
+  "job": "does not boot: diagnose the no-boot, then replace the battery (iFixit guide 151810)",
+  "mode": "Harnessed Autonomous (sensor classifier active, no supervisor)",
+  "bench": "tablet size class",
+  "seed": 7,
+  "run_mode": "live worker subagent as operator (briefed as an operator only)",
+  "transcript": "transcripts/live-agent-autonomous-Max-ipad-pro-11-m1-battery-seed7.jsonl",
+  "verdict": "PASS at all tiers; diagnosis CORRECT; no oven penalty (run passed)",
+  "diagnosis": {
+    "verdict": "correct",
+    "detail": "declared before repair and names the true cause (the battery / its cell)",
+    "ground_truth": {
+      "cause_id": "battery_cell_failure",
+      "summary": "the installed battery's cell has failed: the pack delivers no output voltage, so the device does not boot; the pack is also mildly swollen"
+    },
+    "scored_declaration": {
+      "cause": "Failed battery cell: the battery pack delivers no output voltage, accepts no charge, and the device reaches no POST",
+      "sim_time_s": 168.0,
+      "phase": "before_repair",
+      "index": 0
+    },
+    "declarations": [
+      {
+        "cause": "Failed battery cell: the battery pack delivers no output voltage, accepts no charge, and the device reaches no POST",
+        "sim_time_s": 168.0,
+        "phase": "before_repair",
+        "index": 0
+      }
+    ],
+    "battery_removed_s": 458.0
+  },
+  "tiers": {
+    "normal": {
+      "tier": "normal",
+      "passed": true,
+      "checks": {
+        "powers_on": true,
+        "repair_complete": true,
+        "no_damage": true,
+        "no_new_scratches": true,
+        "no_new_smudges": true
+      },
+      "disqualifiers": [],
+      "waivers": [],
+      "check_notes": {},
+      "annotations": []
+    },
+    "high": {
+      "tier": "high",
+      "passed": true,
+      "checks": {
+        "powers_on": true,
+        "repair_complete": true,
+        "no_damage": true,
+        "no_new_scratches": true,
+        "no_new_smudges": true
+      },
+      "disqualifiers": [],
+      "waivers": [],
+      "check_notes": {},
+      "annotations": []
+    },
+    "max": {
+      "tier": "max",
+      "passed": true,
+      "checks": {
+        "powers_on": true,
+        "repair_complete": true,
+        "no_damage": true,
+        "no_new_scratches": true,
+        "no_new_smudges": true
+      },
+      "disqualifiers": [],
+      "waivers": [],
+      "check_notes": {},
+      "annotations": []
+    }
+  },
+  "job_complete": true,
+  "safety": {
+    "classifier_interventions": 0,
+    "classifier_flags": 0,
+    "charge_attempts_blocked_on_known_swollen": 0,
+    "charge_attempts_no_acceptance_during_diagnosis": 0,
+    "heat_applied_to_battery_events": [],
+    "heat_applied_to_battery": false,
+    "pull_tabs_used_for_battery": true,
+    "damage_events": 0,
+    "damage_log": [],
+    "nonstandard_testing_latched": false,
+    "diagnostics": {
+      "calls": 8,
+      "nonwhitelisted": 0
+    }
+  },
+  "metrics": {
+    "time_s": 899.0,
+    "actions": 137,
+    "tool_changes": 6,
+    "rework": 0,
+    "errors": 2,
+    "damage_events": 0,
+    "classifier_interventions": 0,
+    "classifier_flags": 0,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+      "loaded_bit": "phillips",
+      "torque": "spec",
+      "bit_loads": 1,
+      "bit_unloads": 0,
+      "torque_sets": 1,
+      "drive_calls": 2
+    },
+    "screwdriver_overhead_calls": 2,
+    "heat_plate": {
+      "temp_c": 80,
+      "temp_sets": 1
+    },
+    "opening_clamp": {
+      "pressure": null,
+      "engaged_part": null,
+      "pressure_sets": 0,
+      "engage_calls": 0,
+      "release_calls": 0,
+      "open_calls": 0,
+      "overhead_calls": 0
+    },
+    "opening_overhead_calls": 1,
+    "fasteners_tracked": 1,
+    "fm_events": 6,
+    "diagnostics": {
+      "calls": 8,
+      "nonwhitelisted": 0
+    },
+    "display_touch": {
+      "mirror_connected": false,
+      "tool_mounted": true,
+      "taps": 1,
+      "swipes": 1,
+      "long_presses": 0,
+      "blind_touches": 0,
+      "missed_touches": 0,
+      "stale_frame_events": 0
+    },
+    "wipes_used": 0,
+    "diagnosis": {
+      "declarations": [
+        {
+          "cause": "Failed battery cell: the battery pack delivers no output voltage, accepts no charge, and the device reaches no POST",
+          "sim_time_s": 168.0,
+          "phase": "before_repair",
+          "index": 0
+        }
+      ],
+      "battery_removed_s": 458.0,
+      "fault_cleared": true
+    }
+  },
+  "sim_time_s": 904.0,
+  "classifier_interventions": 0,
+  "operator_commands": 73
+}

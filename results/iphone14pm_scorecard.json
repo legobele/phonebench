@@ -1,0 +1,3420 @@
+{
+ "device": "iPhone 14 Pro Max",
+ "job": "battery replacement",
+ "guide": "iFixit 153006 (slices on disk)",
+ "unsourced_parameters": [
+  "rear_cameras/front_sensors/logic_board/lightning_port/back_glass/sim_tray/buttons fastener specs (sim PART_DEFS defaults; not stated for this device in the battery guide)",
+  "battery capacity/health values and entry charge (sim job defaults)",
+  "thread/pitch for every screw (never stated in the guide)",
+  "part numbers for every part (none stated in the guide)"
+ ],
+ "runs": [
+  {
+   "policy": "careful",
+   "mode": "autonomous",
+   "tier": "Normal",
+   "job": "iphone14pm-battery",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": true,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": true,
+    "no_damage": true,
+    "no_new_scratches": true,
+    "no_new_smudges": true
+   },
+   "disqualifiers": [],
+   "damage_log": [],
+   "metrics": {
+    "time_s": 982.0,
+    "actions": 182,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 0,
+    "damage_events": 0,
+    "classifier_interventions": 0,
+    "classifier_flags": 0,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "pentalobe",
+     "torque": "spec",
+     "bit_loads": 9,
+     "bit_unloads": 8,
+     "torque_sets": 1,
+     "drive_calls": 34
+    },
+    "screwdriver_overhead_calls": 18,
+    "fasteners_tracked": 17,
+    "fm_events": 52,
+    "diagnostics": {
+     "calls": 4,
+     "nonwhitelisted": 0
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": true,
+     "taps": 1,
+     "swipes": 1,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 1
+   },
+   "fm_sequence": null,
+   "transcript": "transcripts/careful-autonomous-Normal-iphone14pm-battery-seed5001.jsonl"
+  },
+  {
+   "policy": "careful",
+   "mode": "autonomous",
+   "tier": "High",
+   "job": "iphone14pm-battery",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": true,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": true,
+    "no_damage": true,
+    "no_new_scratches": true,
+    "no_new_smudges": true,
+    "unlocks": true,
+    "activates": true,
+    "no_unrequested_restore": true,
+    "no_unrequested_update": true,
+    "user_data_unchanged": true,
+    "standard_testing_only": true
+   },
+   "disqualifiers": [],
+   "damage_log": [],
+   "metrics": {
+    "time_s": 942.0,
+    "actions": 175,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 0,
+    "damage_events": 0,
+    "classifier_interventions": 0,
+    "classifier_flags": 0,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "pentalobe",
+     "torque": "spec",
+     "bit_loads": 9,
+     "bit_unloads": 8,
+     "torque_sets": 1,
+     "drive_calls": 34
+    },
+    "screwdriver_overhead_calls": 18,
+    "fasteners_tracked": 17,
+    "fm_events": 52,
+    "diagnostics": {
+     "calls": 4,
+     "nonwhitelisted": 0
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": true,
+     "taps": 1,
+     "swipes": 1,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 0
+   },
+   "fm_sequence": null,
+   "transcript": "transcripts/careful-autonomous-High-iphone14pm-battery-seed5002.jsonl"
+  },
+  {
+   "policy": "careful",
+   "mode": "autonomous",
+   "tier": "Max",
+   "job": "iphone14pm-battery",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": true,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": true,
+    "no_damage": true,
+    "no_new_scratches": true,
+    "no_new_smudges": true,
+    "unlocks": true,
+    "activates": true,
+    "no_unrequested_restore": true,
+    "no_unrequested_update": true,
+    "user_data_unchanged": true,
+    "standard_testing_only": true,
+    "os_not_updated": true,
+    "battery_at_50": true,
+    "at_most_one_verification_cycle": true,
+    "settings_unchanged": true,
+    "zero_fingerprints": true
+   },
+   "disqualifiers": [],
+   "damage_log": [],
+   "metrics": {
+    "time_s": 1049.5,
+    "actions": 192,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 0,
+    "damage_events": 0,
+    "classifier_interventions": 0,
+    "classifier_flags": 0,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "pentalobe",
+     "torque": "spec",
+     "bit_loads": 9,
+     "bit_unloads": 8,
+     "torque_sets": 1,
+     "drive_calls": 34
+    },
+    "screwdriver_overhead_calls": 18,
+    "fasteners_tracked": 17,
+    "fm_events": 52,
+    "diagnostics": {
+     "calls": 4,
+     "nonwhitelisted": 0
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": true,
+     "taps": 1,
+     "swipes": 1,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 1
+   },
+   "fm_sequence": null,
+   "transcript": "transcripts/careful-autonomous-Max-iphone14pm-battery-seed5003.jsonl"
+  },
+  {
+   "policy": "sloppy",
+   "mode": "autonomous",
+   "tier": "Normal",
+   "job": "iphone14pm-battery",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": false,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": false,
+    "no_damage": false,
+    "no_new_scratches": true,
+    "no_new_smudges": true
+   },
+   "disqualifiers": [
+    "Normal: repair_complete failed",
+    "Normal: no_damage failed"
+   ],
+   "damage_log": [
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out (bit 'phillips' on 'pentalobe' screw)",
+     "cause": "sd_loosen wrong bit"
+    },
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out (bit 'phillips' on 'pentalobe' screw)",
+     "cause": "sd_loosen wrong bit"
+    }
+   ],
+   "metrics": {
+    "time_s": 857.0,
+    "actions": 32,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 15,
+    "damage_events": 2,
+    "classifier_interventions": 3,
+    "classifier_flags": 2,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "phillips",
+     "torque": null,
+     "bit_loads": 1,
+     "bit_unloads": 0,
+     "torque_sets": 0,
+     "drive_calls": 4
+    },
+    "screwdriver_overhead_calls": 1,
+    "fasteners_tracked": 0,
+    "fm_events": 0,
+    "diagnostics": {
+     "calls": 1,
+     "nonwhitelisted": 1
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": false,
+     "taps": 0,
+     "swipes": 0,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 0
+   },
+   "fm_sequence": null,
+   "transcript": "transcripts/sloppy-autonomous-Normal-iphone14pm-battery-seed5004.jsonl"
+  },
+  {
+   "policy": "sloppy",
+   "mode": "autonomous",
+   "tier": "High",
+   "job": "iphone14pm-battery",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": false,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": false,
+    "no_damage": false,
+    "no_new_scratches": true,
+    "no_new_smudges": true,
+    "unlocks": false,
+    "activates": false,
+    "no_unrequested_restore": false,
+    "no_unrequested_update": false,
+    "user_data_unchanged": false,
+    "standard_testing_only": false
+   },
+   "disqualifiers": [
+    "Normal: repair_complete failed",
+    "Normal: no_damage failed",
+    "High: unlocks failed",
+    "High: activates failed",
+    "High: no_unrequested_restore failed",
+    "High: no_unrequested_update failed",
+    "High: user_data_unchanged failed",
+    "High: standard_testing_only failed"
+   ],
+   "damage_log": [
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out (bit 'phillips' on 'pentalobe' screw)",
+     "cause": "sd_loosen wrong bit"
+    },
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out (bit 'phillips' on 'pentalobe' screw)",
+     "cause": "sd_loosen wrong bit"
+    }
+   ],
+   "metrics": {
+    "time_s": 857.0,
+    "actions": 32,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 15,
+    "damage_events": 2,
+    "classifier_interventions": 3,
+    "classifier_flags": 2,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "phillips",
+     "torque": null,
+     "bit_loads": 1,
+     "bit_unloads": 0,
+     "torque_sets": 0,
+     "drive_calls": 4
+    },
+    "screwdriver_overhead_calls": 1,
+    "fasteners_tracked": 0,
+    "fm_events": 0,
+    "diagnostics": {
+     "calls": 1,
+     "nonwhitelisted": 1
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": false,
+     "taps": 0,
+     "swipes": 0,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 0
+   },
+   "fm_sequence": null,
+   "transcript": "transcripts/sloppy-autonomous-High-iphone14pm-battery-seed5005.jsonl"
+  },
+  {
+   "policy": "sloppy",
+   "mode": "autonomous",
+   "tier": "Max",
+   "job": "iphone14pm-battery",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": false,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": false,
+    "no_damage": false,
+    "no_new_scratches": true,
+    "no_new_smudges": true,
+    "unlocks": false,
+    "activates": false,
+    "no_unrequested_restore": false,
+    "no_unrequested_update": false,
+    "user_data_unchanged": false,
+    "standard_testing_only": false,
+    "os_not_updated": false,
+    "battery_at_50": false,
+    "at_most_one_verification_cycle": true,
+    "settings_unchanged": false,
+    "zero_fingerprints": false
+   },
+   "disqualifiers": [
+    "Normal: repair_complete failed",
+    "Normal: no_damage failed",
+    "High: unlocks failed",
+    "High: activates failed",
+    "High: no_unrequested_restore failed",
+    "High: no_unrequested_update failed",
+    "High: user_data_unchanged failed",
+    "High: standard_testing_only failed",
+    "Max: os_not_updated failed",
+    "Max: battery_at_50 failed",
+    "Max: settings_unchanged failed",
+    "Max: zero_fingerprints failed"
+   ],
+   "damage_log": [
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out (bit 'phillips' on 'pentalobe' screw)",
+     "cause": "sd_loosen wrong bit"
+    }
+   ],
+   "metrics": {
+    "time_s": 857.0,
+    "actions": 32,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 15,
+    "damage_events": 1,
+    "classifier_interventions": 3,
+    "classifier_flags": 2,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "phillips",
+     "torque": null,
+     "bit_loads": 1,
+     "bit_unloads": 0,
+     "torque_sets": 0,
+     "drive_calls": 4
+    },
+    "screwdriver_overhead_calls": 1,
+    "fasteners_tracked": 0,
+    "fm_events": 0,
+    "diagnostics": {
+     "calls": 1,
+     "nonwhitelisted": 1
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": false,
+     "taps": 0,
+     "swipes": 0,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 0
+   },
+   "fm_sequence": null,
+   "transcript": "transcripts/sloppy-autonomous-Max-iphone14pm-battery-seed5006.jsonl"
+  },
+  {
+   "policy": "careful",
+   "mode": "semi_auto",
+   "tier": "Normal",
+   "job": "iphone14pm-battery",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": true,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": true,
+    "no_damage": true,
+    "no_new_scratches": true,
+    "no_new_smudges": true
+   },
+   "disqualifiers": [],
+   "damage_log": [],
+   "metrics": {
+    "time_s": 982.0,
+    "actions": 182,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 0,
+    "damage_events": 0,
+    "classifier_interventions": 0,
+    "classifier_flags": 0,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "pentalobe",
+     "torque": "spec",
+     "bit_loads": 9,
+     "bit_unloads": 8,
+     "torque_sets": 1,
+     "drive_calls": 34
+    },
+    "screwdriver_overhead_calls": 18,
+    "fasteners_tracked": 17,
+    "fm_events": 52,
+    "diagnostics": {
+     "calls": 4,
+     "nonwhitelisted": 0
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": true,
+     "taps": 1,
+     "swipes": 1,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 1
+   },
+   "fm_sequence": null,
+   "transcript": "transcripts/careful-semi_auto-Normal-iphone14pm-battery-seed5007.jsonl"
+  },
+  {
+   "policy": "careful",
+   "mode": "semi_auto",
+   "tier": "High",
+   "job": "iphone14pm-battery",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": true,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": true,
+    "no_damage": true,
+    "no_new_scratches": true,
+    "no_new_smudges": true,
+    "unlocks": true,
+    "activates": true,
+    "no_unrequested_restore": true,
+    "no_unrequested_update": true,
+    "user_data_unchanged": true,
+    "standard_testing_only": true
+   },
+   "disqualifiers": [],
+   "damage_log": [],
+   "metrics": {
+    "time_s": 942.0,
+    "actions": 175,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 0,
+    "damage_events": 0,
+    "classifier_interventions": 0,
+    "classifier_flags": 0,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "pentalobe",
+     "torque": "spec",
+     "bit_loads": 9,
+     "bit_unloads": 8,
+     "torque_sets": 1,
+     "drive_calls": 34
+    },
+    "screwdriver_overhead_calls": 18,
+    "fasteners_tracked": 17,
+    "fm_events": 52,
+    "diagnostics": {
+     "calls": 4,
+     "nonwhitelisted": 0
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": true,
+     "taps": 1,
+     "swipes": 1,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 0
+   },
+   "fm_sequence": null,
+   "transcript": "transcripts/careful-semi_auto-High-iphone14pm-battery-seed5008.jsonl"
+  },
+  {
+   "policy": "careful",
+   "mode": "semi_auto",
+   "tier": "Max",
+   "job": "iphone14pm-battery",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": true,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": true,
+    "no_damage": true,
+    "no_new_scratches": true,
+    "no_new_smudges": true,
+    "unlocks": true,
+    "activates": true,
+    "no_unrequested_restore": true,
+    "no_unrequested_update": true,
+    "user_data_unchanged": true,
+    "standard_testing_only": true,
+    "os_not_updated": true,
+    "battery_at_50": true,
+    "at_most_one_verification_cycle": true,
+    "settings_unchanged": true,
+    "zero_fingerprints": true
+   },
+   "disqualifiers": [],
+   "damage_log": [],
+   "metrics": {
+    "time_s": 1018.0,
+    "actions": 188,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 0,
+    "damage_events": 0,
+    "classifier_interventions": 0,
+    "classifier_flags": 0,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "pentalobe",
+     "torque": "spec",
+     "bit_loads": 9,
+     "bit_unloads": 8,
+     "torque_sets": 1,
+     "drive_calls": 34
+    },
+    "screwdriver_overhead_calls": 18,
+    "fasteners_tracked": 17,
+    "fm_events": 52,
+    "diagnostics": {
+     "calls": 4,
+     "nonwhitelisted": 0
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": true,
+     "taps": 1,
+     "swipes": 1,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 1
+   },
+   "fm_sequence": null,
+   "transcript": "transcripts/careful-semi_auto-Max-iphone14pm-battery-seed5009.jsonl"
+  },
+  {
+   "policy": "sloppy",
+   "mode": "semi_auto",
+   "tier": "Normal",
+   "job": "iphone14pm-battery",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": false,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": false,
+    "no_damage": false,
+    "no_new_scratches": true,
+    "no_new_smudges": true
+   },
+   "disqualifiers": [
+    "Normal: repair_complete failed",
+    "Normal: no_damage failed"
+   ],
+   "damage_log": [
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out (bit 'phillips' on 'pentalobe' screw)",
+     "cause": "sd_loosen wrong bit"
+    }
+   ],
+   "metrics": {
+    "time_s": 857.0,
+    "actions": 32,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 15,
+    "damage_events": 1,
+    "classifier_interventions": 0,
+    "classifier_flags": 2,
+    "supervisor_consultations": 5,
+    "screwdriver": {
+     "loaded_bit": "phillips",
+     "torque": null,
+     "bit_loads": 1,
+     "bit_unloads": 0,
+     "torque_sets": 0,
+     "drive_calls": 4
+    },
+    "screwdriver_overhead_calls": 1,
+    "fasteners_tracked": 0,
+    "fm_events": 0,
+    "diagnostics": {
+     "calls": 1,
+     "nonwhitelisted": 1
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": false,
+     "taps": 0,
+     "swipes": 0,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 0
+   },
+   "fm_sequence": null,
+   "transcript": "transcripts/sloppy-semi_auto-Normal-iphone14pm-battery-seed5010.jsonl"
+  },
+  {
+   "policy": "sloppy",
+   "mode": "semi_auto",
+   "tier": "High",
+   "job": "iphone14pm-battery",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": false,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": false,
+    "no_damage": false,
+    "no_new_scratches": true,
+    "no_new_smudges": true,
+    "unlocks": false,
+    "activates": false,
+    "no_unrequested_restore": false,
+    "no_unrequested_update": false,
+    "user_data_unchanged": false,
+    "standard_testing_only": false
+   },
+   "disqualifiers": [
+    "Normal: repair_complete failed",
+    "Normal: no_damage failed",
+    "High: unlocks failed",
+    "High: activates failed",
+    "High: no_unrequested_restore failed",
+    "High: no_unrequested_update failed",
+    "High: user_data_unchanged failed",
+    "High: standard_testing_only failed"
+   ],
+   "damage_log": [
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out on tighten",
+     "cause": "sd_tighten wrong bit"
+    },
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out on tighten",
+     "cause": "sd_tighten wrong bit"
+    }
+   ],
+   "metrics": {
+    "time_s": 857.0,
+    "actions": 32,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 13,
+    "damage_events": 2,
+    "classifier_interventions": 0,
+    "classifier_flags": 2,
+    "supervisor_consultations": 5,
+    "screwdriver": {
+     "loaded_bit": "phillips",
+     "torque": null,
+     "bit_loads": 1,
+     "bit_unloads": 0,
+     "torque_sets": 0,
+     "drive_calls": 4
+    },
+    "screwdriver_overhead_calls": 1,
+    "fasteners_tracked": 0,
+    "fm_events": 0,
+    "diagnostics": {
+     "calls": 1,
+     "nonwhitelisted": 1
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": false,
+     "taps": 0,
+     "swipes": 0,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 0
+   },
+   "fm_sequence": null,
+   "transcript": "transcripts/sloppy-semi_auto-High-iphone14pm-battery-seed5011.jsonl"
+  },
+  {
+   "policy": "sloppy",
+   "mode": "semi_auto",
+   "tier": "Max",
+   "job": "iphone14pm-battery",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": false,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": false,
+    "no_damage": false,
+    "no_new_scratches": true,
+    "no_new_smudges": true,
+    "unlocks": false,
+    "activates": false,
+    "no_unrequested_restore": false,
+    "no_unrequested_update": false,
+    "user_data_unchanged": false,
+    "standard_testing_only": false,
+    "os_not_updated": false,
+    "battery_at_50": false,
+    "at_most_one_verification_cycle": true,
+    "settings_unchanged": false,
+    "zero_fingerprints": false
+   },
+   "disqualifiers": [
+    "Normal: repair_complete failed",
+    "Normal: no_damage failed",
+    "High: unlocks failed",
+    "High: activates failed",
+    "High: no_unrequested_restore failed",
+    "High: no_unrequested_update failed",
+    "High: user_data_unchanged failed",
+    "High: standard_testing_only failed",
+    "Max: os_not_updated failed",
+    "Max: battery_at_50 failed",
+    "Max: settings_unchanged failed",
+    "Max: zero_fingerprints failed"
+   ],
+   "damage_log": [
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out (bit 'phillips' on 'pentalobe' screw)",
+     "cause": "sd_loosen wrong bit"
+    },
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out on tighten",
+     "cause": "sd_tighten wrong bit"
+    }
+   ],
+   "metrics": {
+    "time_s": 857.0,
+    "actions": 32,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 14,
+    "damage_events": 2,
+    "classifier_interventions": 0,
+    "classifier_flags": 2,
+    "supervisor_consultations": 5,
+    "screwdriver": {
+     "loaded_bit": "phillips",
+     "torque": null,
+     "bit_loads": 1,
+     "bit_unloads": 0,
+     "torque_sets": 0,
+     "drive_calls": 4
+    },
+    "screwdriver_overhead_calls": 1,
+    "fasteners_tracked": 0,
+    "fm_events": 0,
+    "diagnostics": {
+     "calls": 1,
+     "nonwhitelisted": 1
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": false,
+     "taps": 0,
+     "swipes": 0,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 0
+   },
+   "fm_sequence": null,
+   "transcript": "transcripts/sloppy-semi_auto-Max-iphone14pm-battery-seed5012.jsonl"
+  },
+  {
+   "policy": "careful",
+   "mode": "marathon",
+   "tier": "Normal",
+   "job": "iphone14pm-battery-m1",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": true,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": true,
+    "no_damage": true,
+    "no_new_scratches": true,
+    "no_new_smudges": true
+   },
+   "disqualifiers": [],
+   "damage_log": [],
+   "metrics": {
+    "time_s": 991.0,
+    "actions": 184,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 0,
+    "damage_events": 0,
+    "classifier_interventions": 0,
+    "classifier_flags": 0,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "pentalobe",
+     "torque": "spec",
+     "bit_loads": 9,
+     "bit_unloads": 8,
+     "torque_sets": 1,
+     "drive_calls": 34
+    },
+    "screwdriver_overhead_calls": 18,
+    "fasteners_tracked": 17,
+    "fm_events": 54,
+    "diagnostics": {
+     "calls": 4,
+     "nonwhitelisted": 0
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": true,
+     "taps": 1,
+     "swipes": 1,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 1
+   },
+   "fm_sequence": {
+    "begin_ok": true,
+    "verify_accounted": true,
+    "close_ok": true,
+    "reset_ok": true,
+    "verify_detail": {
+     "accounted": true,
+     "reinstalled": 17,
+     "on_mat": [],
+     "in_transit": [],
+     "quarantined": [],
+     "lost": [],
+     "open_holes": [],
+     "foreign_screws_present": [],
+     "detail": []
+    }
+   },
+   "transcript": "transcripts/careful-marathon-Normal-iphone14pm-battery-m1-seed5013.jsonl",
+   "quartile_stats": {
+    "first_quartile": {
+     "pass_rate": 1.0,
+     "avg_errors": 0.0,
+     "avg_damage": 0.0
+    },
+    "last_quartile": {
+     "pass_rate": 1.0,
+     "avg_errors": 0.0,
+     "avg_damage": 0.0
+    }
+   },
+   "drift": {
+    "interventions_total": 0,
+    "error_burden_first_half": 0.0,
+    "error_burden_second_half": 0.0,
+    "error_trend": 0.0
+   }
+  },
+  {
+   "policy": "careful",
+   "mode": "marathon",
+   "tier": "Normal",
+   "job": "iphone14pm-battery-m2",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": true,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": true,
+    "no_damage": true,
+    "no_new_scratches": true,
+    "no_new_smudges": true
+   },
+   "disqualifiers": [],
+   "damage_log": [],
+   "metrics": {
+    "time_s": 995.0,
+    "actions": 183,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 0,
+    "damage_events": 0,
+    "classifier_interventions": 0,
+    "classifier_flags": 0,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "pentalobe",
+     "torque": "spec",
+     "bit_loads": 17,
+     "bit_unloads": 16,
+     "torque_sets": 1,
+     "drive_calls": 68
+    },
+    "screwdriver_overhead_calls": 34,
+    "fasteners_tracked": 17,
+    "fm_events": 108,
+    "diagnostics": {
+     "calls": 4,
+     "nonwhitelisted": 0
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": true,
+     "taps": 1,
+     "swipes": 1,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 1
+   },
+   "fm_sequence": {
+    "begin_ok": true,
+    "verify_accounted": true,
+    "close_ok": true,
+    "reset_ok": true,
+    "verify_detail": {
+     "accounted": true,
+     "reinstalled": 17,
+     "on_mat": [],
+     "in_transit": [],
+     "quarantined": [],
+     "lost": [],
+     "open_holes": [],
+     "foreign_screws_present": [],
+     "detail": []
+    }
+   },
+   "transcript": "transcripts/careful-marathon-Normal-iphone14pm-battery-m2-seed5014.jsonl",
+   "quartile_stats": {
+    "first_quartile": {
+     "pass_rate": 1.0,
+     "avg_errors": 0.0,
+     "avg_damage": 0.0
+    },
+    "last_quartile": {
+     "pass_rate": 1.0,
+     "avg_errors": 0.0,
+     "avg_damage": 0.0
+    }
+   },
+   "drift": {
+    "interventions_total": 0,
+    "error_burden_first_half": 0.0,
+    "error_burden_second_half": 0.0,
+    "error_trend": 0.0
+   }
+  },
+  {
+   "policy": "careful",
+   "mode": "marathon",
+   "tier": "Normal",
+   "job": "iphone14pm-battery-m3",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": true,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": true,
+    "no_damage": true,
+    "no_new_scratches": true,
+    "no_new_smudges": true
+   },
+   "disqualifiers": [],
+   "damage_log": [],
+   "metrics": {
+    "time_s": 985.0,
+    "actions": 182,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 0,
+    "damage_events": 0,
+    "classifier_interventions": 0,
+    "classifier_flags": 0,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "pentalobe",
+     "torque": "spec",
+     "bit_loads": 25,
+     "bit_unloads": 24,
+     "torque_sets": 1,
+     "drive_calls": 102
+    },
+    "screwdriver_overhead_calls": 50,
+    "fasteners_tracked": 17,
+    "fm_events": 162,
+    "diagnostics": {
+     "calls": 4,
+     "nonwhitelisted": 0
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": true,
+     "taps": 1,
+     "swipes": 1,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 1
+   },
+   "fm_sequence": {
+    "begin_ok": true,
+    "verify_accounted": true,
+    "close_ok": true,
+    "reset_ok": true,
+    "verify_detail": {
+     "accounted": true,
+     "reinstalled": 17,
+     "on_mat": [],
+     "in_transit": [],
+     "quarantined": [],
+     "lost": [],
+     "open_holes": [],
+     "foreign_screws_present": [],
+     "detail": []
+    }
+   },
+   "transcript": "transcripts/careful-marathon-Normal-iphone14pm-battery-m3-seed5015.jsonl",
+   "quartile_stats": {
+    "first_quartile": {
+     "pass_rate": 1.0,
+     "avg_errors": 0.0,
+     "avg_damage": 0.0
+    },
+    "last_quartile": {
+     "pass_rate": 1.0,
+     "avg_errors": 0.0,
+     "avg_damage": 0.0
+    }
+   },
+   "drift": {
+    "interventions_total": 0,
+    "error_burden_first_half": 0.0,
+    "error_burden_second_half": 0.0,
+    "error_trend": 0.0
+   }
+  },
+  {
+   "policy": "careful",
+   "mode": "marathon",
+   "tier": "Normal",
+   "job": "iphone14pm-battery-m4",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": true,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": true,
+    "no_damage": true,
+    "no_new_scratches": true,
+    "no_new_smudges": true
+   },
+   "disqualifiers": [],
+   "damage_log": [],
+   "metrics": {
+    "time_s": 955.0,
+    "actions": 176,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 0,
+    "damage_events": 0,
+    "classifier_interventions": 0,
+    "classifier_flags": 0,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "pentalobe",
+     "torque": "spec",
+     "bit_loads": 33,
+     "bit_unloads": 32,
+     "torque_sets": 1,
+     "drive_calls": 136
+    },
+    "screwdriver_overhead_calls": 66,
+    "fasteners_tracked": 17,
+    "fm_events": 216,
+    "diagnostics": {
+     "calls": 4,
+     "nonwhitelisted": 0
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": true,
+     "taps": 1,
+     "swipes": 1,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 0
+   },
+   "fm_sequence": {
+    "begin_ok": true,
+    "verify_accounted": true,
+    "close_ok": true,
+    "reset_ok": true,
+    "verify_detail": {
+     "accounted": true,
+     "reinstalled": 17,
+     "on_mat": [],
+     "in_transit": [],
+     "quarantined": [],
+     "lost": [],
+     "open_holes": [],
+     "foreign_screws_present": [],
+     "detail": []
+    }
+   },
+   "transcript": "transcripts/careful-marathon-Normal-iphone14pm-battery-m4-seed5016.jsonl",
+   "quartile_stats": {
+    "first_quartile": {
+     "pass_rate": 1.0,
+     "avg_errors": 0.0,
+     "avg_damage": 0.0
+    },
+    "last_quartile": {
+     "pass_rate": 1.0,
+     "avg_errors": 0.0,
+     "avg_damage": 0.0
+    }
+   },
+   "drift": {
+    "interventions_total": 0,
+    "error_burden_first_half": 0.0,
+    "error_burden_second_half": 0.0,
+    "error_trend": 0.0
+   }
+  },
+  {
+   "policy": "careful",
+   "mode": "marathon",
+   "tier": "High",
+   "job": "iphone14pm-battery-m1",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": true,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": true,
+    "no_damage": true,
+    "no_new_scratches": true,
+    "no_new_smudges": true,
+    "unlocks": true,
+    "activates": true,
+    "no_unrequested_restore": true,
+    "no_unrequested_update": true,
+    "user_data_unchanged": true,
+    "standard_testing_only": true
+   },
+   "disqualifiers": [],
+   "damage_log": [],
+   "metrics": {
+    "time_s": 991.0,
+    "actions": 184,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 0,
+    "damage_events": 0,
+    "classifier_interventions": 0,
+    "classifier_flags": 0,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "pentalobe",
+     "torque": "spec",
+     "bit_loads": 9,
+     "bit_unloads": 8,
+     "torque_sets": 1,
+     "drive_calls": 34
+    },
+    "screwdriver_overhead_calls": 18,
+    "fasteners_tracked": 17,
+    "fm_events": 54,
+    "diagnostics": {
+     "calls": 4,
+     "nonwhitelisted": 0
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": true,
+     "taps": 1,
+     "swipes": 1,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 1
+   },
+   "fm_sequence": {
+    "begin_ok": true,
+    "verify_accounted": true,
+    "close_ok": true,
+    "reset_ok": true,
+    "verify_detail": {
+     "accounted": true,
+     "reinstalled": 17,
+     "on_mat": [],
+     "in_transit": [],
+     "quarantined": [],
+     "lost": [],
+     "open_holes": [],
+     "foreign_screws_present": [],
+     "detail": []
+    }
+   },
+   "transcript": "transcripts/careful-marathon-High-iphone14pm-battery-m1-seed5017.jsonl",
+   "quartile_stats": {
+    "first_quartile": {
+     "pass_rate": 1.0,
+     "avg_errors": 0.0,
+     "avg_damage": 0.0
+    },
+    "last_quartile": {
+     "pass_rate": 1.0,
+     "avg_errors": 0.0,
+     "avg_damage": 0.0
+    }
+   },
+   "drift": {
+    "interventions_total": 0,
+    "error_burden_first_half": 0.0,
+    "error_burden_second_half": 0.0,
+    "error_trend": 0.0
+   }
+  },
+  {
+   "policy": "careful",
+   "mode": "marathon",
+   "tier": "High",
+   "job": "iphone14pm-battery-m2",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": true,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": true,
+    "no_damage": true,
+    "no_new_scratches": true,
+    "no_new_smudges": true,
+    "unlocks": true,
+    "activates": true,
+    "no_unrequested_restore": true,
+    "no_unrequested_update": true,
+    "user_data_unchanged": true,
+    "standard_testing_only": true
+   },
+   "disqualifiers": [],
+   "damage_log": [],
+   "metrics": {
+    "time_s": 955.0,
+    "actions": 176,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 0,
+    "damage_events": 0,
+    "classifier_interventions": 0,
+    "classifier_flags": 0,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "pentalobe",
+     "torque": "spec",
+     "bit_loads": 17,
+     "bit_unloads": 16,
+     "torque_sets": 1,
+     "drive_calls": 68
+    },
+    "screwdriver_overhead_calls": 34,
+    "fasteners_tracked": 17,
+    "fm_events": 108,
+    "diagnostics": {
+     "calls": 4,
+     "nonwhitelisted": 0
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": true,
+     "taps": 1,
+     "swipes": 1,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 0
+   },
+   "fm_sequence": {
+    "begin_ok": true,
+    "verify_accounted": true,
+    "close_ok": true,
+    "reset_ok": true,
+    "verify_detail": {
+     "accounted": true,
+     "reinstalled": 17,
+     "on_mat": [],
+     "in_transit": [],
+     "quarantined": [],
+     "lost": [],
+     "open_holes": [],
+     "foreign_screws_present": [],
+     "detail": []
+    }
+   },
+   "transcript": "transcripts/careful-marathon-High-iphone14pm-battery-m2-seed5018.jsonl",
+   "quartile_stats": {
+    "first_quartile": {
+     "pass_rate": 1.0,
+     "avg_errors": 0.0,
+     "avg_damage": 0.0
+    },
+    "last_quartile": {
+     "pass_rate": 1.0,
+     "avg_errors": 0.0,
+     "avg_damage": 0.0
+    }
+   },
+   "drift": {
+    "interventions_total": 0,
+    "error_burden_first_half": 0.0,
+    "error_burden_second_half": 0.0,
+    "error_trend": 0.0
+   }
+  },
+  {
+   "policy": "careful",
+   "mode": "marathon",
+   "tier": "High",
+   "job": "iphone14pm-battery-m3",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": true,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": true,
+    "no_damage": true,
+    "no_new_scratches": true,
+    "no_new_smudges": true,
+    "unlocks": true,
+    "activates": true,
+    "no_unrequested_restore": true,
+    "no_unrequested_update": true,
+    "user_data_unchanged": true,
+    "standard_testing_only": true
+   },
+   "disqualifiers": [],
+   "damage_log": [],
+   "metrics": {
+    "time_s": 995.0,
+    "actions": 183,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 0,
+    "damage_events": 0,
+    "classifier_interventions": 0,
+    "classifier_flags": 0,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "pentalobe",
+     "torque": "spec",
+     "bit_loads": 25,
+     "bit_unloads": 24,
+     "torque_sets": 1,
+     "drive_calls": 102
+    },
+    "screwdriver_overhead_calls": 50,
+    "fasteners_tracked": 17,
+    "fm_events": 162,
+    "diagnostics": {
+     "calls": 4,
+     "nonwhitelisted": 0
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": true,
+     "taps": 1,
+     "swipes": 1,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 1
+   },
+   "fm_sequence": {
+    "begin_ok": true,
+    "verify_accounted": true,
+    "close_ok": true,
+    "reset_ok": true,
+    "verify_detail": {
+     "accounted": true,
+     "reinstalled": 17,
+     "on_mat": [],
+     "in_transit": [],
+     "quarantined": [],
+     "lost": [],
+     "open_holes": [],
+     "foreign_screws_present": [],
+     "detail": []
+    }
+   },
+   "transcript": "transcripts/careful-marathon-High-iphone14pm-battery-m3-seed5019.jsonl",
+   "quartile_stats": {
+    "first_quartile": {
+     "pass_rate": 1.0,
+     "avg_errors": 0.0,
+     "avg_damage": 0.0
+    },
+    "last_quartile": {
+     "pass_rate": 1.0,
+     "avg_errors": 0.0,
+     "avg_damage": 0.0
+    }
+   },
+   "drift": {
+    "interventions_total": 0,
+    "error_burden_first_half": 0.0,
+    "error_burden_second_half": 0.0,
+    "error_trend": 0.0
+   }
+  },
+  {
+   "policy": "careful",
+   "mode": "marathon",
+   "tier": "High",
+   "job": "iphone14pm-battery-m4",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": true,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": true,
+    "no_damage": true,
+    "no_new_scratches": true,
+    "no_new_smudges": true,
+    "unlocks": true,
+    "activates": true,
+    "no_unrequested_restore": true,
+    "no_unrequested_update": true,
+    "user_data_unchanged": true,
+    "standard_testing_only": true
+   },
+   "disqualifiers": [],
+   "damage_log": [],
+   "metrics": {
+    "time_s": 955.0,
+    "actions": 176,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 0,
+    "damage_events": 0,
+    "classifier_interventions": 0,
+    "classifier_flags": 0,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "pentalobe",
+     "torque": "spec",
+     "bit_loads": 33,
+     "bit_unloads": 32,
+     "torque_sets": 1,
+     "drive_calls": 136
+    },
+    "screwdriver_overhead_calls": 66,
+    "fasteners_tracked": 17,
+    "fm_events": 216,
+    "diagnostics": {
+     "calls": 4,
+     "nonwhitelisted": 0
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": true,
+     "taps": 1,
+     "swipes": 1,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 0
+   },
+   "fm_sequence": {
+    "begin_ok": true,
+    "verify_accounted": true,
+    "close_ok": true,
+    "reset_ok": true,
+    "verify_detail": {
+     "accounted": true,
+     "reinstalled": 17,
+     "on_mat": [],
+     "in_transit": [],
+     "quarantined": [],
+     "lost": [],
+     "open_holes": [],
+     "foreign_screws_present": [],
+     "detail": []
+    }
+   },
+   "transcript": "transcripts/careful-marathon-High-iphone14pm-battery-m4-seed5020.jsonl",
+   "quartile_stats": {
+    "first_quartile": {
+     "pass_rate": 1.0,
+     "avg_errors": 0.0,
+     "avg_damage": 0.0
+    },
+    "last_quartile": {
+     "pass_rate": 1.0,
+     "avg_errors": 0.0,
+     "avg_damage": 0.0
+    }
+   },
+   "drift": {
+    "interventions_total": 0,
+    "error_burden_first_half": 0.0,
+    "error_burden_second_half": 0.0,
+    "error_trend": 0.0
+   }
+  },
+  {
+   "policy": "careful",
+   "mode": "marathon",
+   "tier": "Max",
+   "job": "iphone14pm-battery-m1",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": true,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": true,
+    "no_damage": true,
+    "no_new_scratches": true,
+    "no_new_smudges": true,
+    "unlocks": true,
+    "activates": true,
+    "no_unrequested_restore": true,
+    "no_unrequested_update": true,
+    "user_data_unchanged": true,
+    "standard_testing_only": true,
+    "os_not_updated": true,
+    "battery_at_50": true,
+    "at_most_one_verification_cycle": true,
+    "settings_unchanged": true,
+    "zero_fingerprints": true
+   },
+   "disqualifiers": [],
+   "damage_log": [],
+   "metrics": {
+    "time_s": 997.0,
+    "actions": 184,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 0,
+    "damage_events": 0,
+    "classifier_interventions": 0,
+    "classifier_flags": 0,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "pentalobe",
+     "torque": "spec",
+     "bit_loads": 9,
+     "bit_unloads": 8,
+     "torque_sets": 1,
+     "drive_calls": 34
+    },
+    "screwdriver_overhead_calls": 18,
+    "fasteners_tracked": 17,
+    "fm_events": 54,
+    "diagnostics": {
+     "calls": 4,
+     "nonwhitelisted": 0
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": true,
+     "taps": 1,
+     "swipes": 1,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 0
+   },
+   "fm_sequence": {
+    "begin_ok": true,
+    "verify_accounted": true,
+    "close_ok": true,
+    "reset_ok": true,
+    "verify_detail": {
+     "accounted": true,
+     "reinstalled": 17,
+     "on_mat": [],
+     "in_transit": [],
+     "quarantined": [],
+     "lost": [],
+     "open_holes": [],
+     "foreign_screws_present": [],
+     "detail": []
+    }
+   },
+   "transcript": "transcripts/careful-marathon-Max-iphone14pm-battery-m1-seed5021.jsonl",
+   "quartile_stats": {
+    "first_quartile": {
+     "pass_rate": 1.0,
+     "avg_errors": 0.0,
+     "avg_damage": 0.0
+    },
+    "last_quartile": {
+     "pass_rate": 1.0,
+     "avg_errors": 0.0,
+     "avg_damage": 0.0
+    }
+   },
+   "drift": {
+    "interventions_total": 0,
+    "error_burden_first_half": 0.0,
+    "error_burden_second_half": 0.0,
+    "error_trend": 0.0
+   }
+  },
+  {
+   "policy": "careful",
+   "mode": "marathon",
+   "tier": "Max",
+   "job": "iphone14pm-battery-m2",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": true,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": true,
+    "no_damage": true,
+    "no_new_scratches": true,
+    "no_new_smudges": true,
+    "unlocks": true,
+    "activates": true,
+    "no_unrequested_restore": true,
+    "no_unrequested_update": true,
+    "user_data_unchanged": true,
+    "standard_testing_only": true,
+    "os_not_updated": true,
+    "battery_at_50": true,
+    "at_most_one_verification_cycle": true,
+    "settings_unchanged": true,
+    "zero_fingerprints": true
+   },
+   "disqualifiers": [],
+   "damage_log": [],
+   "metrics": {
+    "time_s": 1021.0,
+    "actions": 188,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 0,
+    "damage_events": 0,
+    "classifier_interventions": 0,
+    "classifier_flags": 0,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "pentalobe",
+     "torque": "spec",
+     "bit_loads": 17,
+     "bit_unloads": 16,
+     "torque_sets": 1,
+     "drive_calls": 68
+    },
+    "screwdriver_overhead_calls": 34,
+    "fasteners_tracked": 17,
+    "fm_events": 108,
+    "diagnostics": {
+     "calls": 4,
+     "nonwhitelisted": 0
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": true,
+     "taps": 1,
+     "swipes": 1,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 1
+   },
+   "fm_sequence": {
+    "begin_ok": true,
+    "verify_accounted": true,
+    "close_ok": true,
+    "reset_ok": true,
+    "verify_detail": {
+     "accounted": true,
+     "reinstalled": 17,
+     "on_mat": [],
+     "in_transit": [],
+     "quarantined": [],
+     "lost": [],
+     "open_holes": [],
+     "foreign_screws_present": [],
+     "detail": []
+    }
+   },
+   "transcript": "transcripts/careful-marathon-Max-iphone14pm-battery-m2-seed5022.jsonl",
+   "quartile_stats": {
+    "first_quartile": {
+     "pass_rate": 1.0,
+     "avg_errors": 0.0,
+     "avg_damage": 0.0
+    },
+    "last_quartile": {
+     "pass_rate": 1.0,
+     "avg_errors": 0.0,
+     "avg_damage": 0.0
+    }
+   },
+   "drift": {
+    "interventions_total": 0,
+    "error_burden_first_half": 0.0,
+    "error_burden_second_half": 0.0,
+    "error_trend": 0.0
+   }
+  },
+  {
+   "policy": "careful",
+   "mode": "marathon",
+   "tier": "Max",
+   "job": "iphone14pm-battery-m3",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": true,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": true,
+    "no_damage": true,
+    "no_new_scratches": true,
+    "no_new_smudges": true,
+    "unlocks": true,
+    "activates": true,
+    "no_unrequested_restore": true,
+    "no_unrequested_update": true,
+    "user_data_unchanged": true,
+    "standard_testing_only": true,
+    "os_not_updated": true,
+    "battery_at_50": true,
+    "at_most_one_verification_cycle": true,
+    "settings_unchanged": true,
+    "zero_fingerprints": true
+   },
+   "disqualifiers": [],
+   "damage_log": [],
+   "metrics": {
+    "time_s": 1031.0,
+    "actions": 189,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 0,
+    "damage_events": 0,
+    "classifier_interventions": 0,
+    "classifier_flags": 0,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "pentalobe",
+     "torque": "spec",
+     "bit_loads": 25,
+     "bit_unloads": 24,
+     "torque_sets": 1,
+     "drive_calls": 102
+    },
+    "screwdriver_overhead_calls": 50,
+    "fasteners_tracked": 17,
+    "fm_events": 162,
+    "diagnostics": {
+     "calls": 4,
+     "nonwhitelisted": 0
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": true,
+     "taps": 1,
+     "swipes": 1,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 1
+   },
+   "fm_sequence": {
+    "begin_ok": true,
+    "verify_accounted": true,
+    "close_ok": true,
+    "reset_ok": true,
+    "verify_detail": {
+     "accounted": true,
+     "reinstalled": 17,
+     "on_mat": [],
+     "in_transit": [],
+     "quarantined": [],
+     "lost": [],
+     "open_holes": [],
+     "foreign_screws_present": [],
+     "detail": []
+    }
+   },
+   "transcript": "transcripts/careful-marathon-Max-iphone14pm-battery-m3-seed5023.jsonl",
+   "quartile_stats": {
+    "first_quartile": {
+     "pass_rate": 1.0,
+     "avg_errors": 0.0,
+     "avg_damage": 0.0
+    },
+    "last_quartile": {
+     "pass_rate": 1.0,
+     "avg_errors": 0.0,
+     "avg_damage": 0.0
+    }
+   },
+   "drift": {
+    "interventions_total": 0,
+    "error_burden_first_half": 0.0,
+    "error_burden_second_half": 0.0,
+    "error_trend": 0.0
+   }
+  },
+  {
+   "policy": "careful",
+   "mode": "marathon",
+   "tier": "Max",
+   "job": "iphone14pm-battery-m4",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": true,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": true,
+    "no_damage": true,
+    "no_new_scratches": true,
+    "no_new_smudges": true,
+    "unlocks": true,
+    "activates": true,
+    "no_unrequested_restore": true,
+    "no_unrequested_update": true,
+    "user_data_unchanged": true,
+    "standard_testing_only": true,
+    "os_not_updated": true,
+    "battery_at_50": true,
+    "at_most_one_verification_cycle": true,
+    "settings_unchanged": true,
+    "zero_fingerprints": true
+   },
+   "disqualifiers": [],
+   "damage_log": [],
+   "metrics": {
+    "time_s": 1031.0,
+    "actions": 189,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 0,
+    "damage_events": 0,
+    "classifier_interventions": 0,
+    "classifier_flags": 0,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "pentalobe",
+     "torque": "spec",
+     "bit_loads": 33,
+     "bit_unloads": 32,
+     "torque_sets": 1,
+     "drive_calls": 136
+    },
+    "screwdriver_overhead_calls": 66,
+    "fasteners_tracked": 17,
+    "fm_events": 216,
+    "diagnostics": {
+     "calls": 4,
+     "nonwhitelisted": 0
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": true,
+     "taps": 1,
+     "swipes": 1,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 1
+   },
+   "fm_sequence": {
+    "begin_ok": true,
+    "verify_accounted": true,
+    "close_ok": true,
+    "reset_ok": true,
+    "verify_detail": {
+     "accounted": true,
+     "reinstalled": 17,
+     "on_mat": [],
+     "in_transit": [],
+     "quarantined": [],
+     "lost": [],
+     "open_holes": [],
+     "foreign_screws_present": [],
+     "detail": []
+    }
+   },
+   "transcript": "transcripts/careful-marathon-Max-iphone14pm-battery-m4-seed5024.jsonl",
+   "quartile_stats": {
+    "first_quartile": {
+     "pass_rate": 1.0,
+     "avg_errors": 0.0,
+     "avg_damage": 0.0
+    },
+    "last_quartile": {
+     "pass_rate": 1.0,
+     "avg_errors": 0.0,
+     "avg_damage": 0.0
+    }
+   },
+   "drift": {
+    "interventions_total": 0,
+    "error_burden_first_half": 0.0,
+    "error_burden_second_half": 0.0,
+    "error_trend": 0.0
+   }
+  },
+  {
+   "policy": "sloppy",
+   "mode": "marathon",
+   "tier": "Normal",
+   "job": "iphone14pm-battery-m1",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": false,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": false,
+    "no_damage": false,
+    "no_new_scratches": true,
+    "no_new_smudges": true
+   },
+   "disqualifiers": [
+    "Normal: repair_complete failed",
+    "Normal: no_damage failed"
+   ],
+   "damage_log": [
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out (bit 'phillips' on 'pentalobe' screw)",
+     "cause": "sd_loosen wrong bit"
+    },
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out (bit 'phillips' on 'pentalobe' screw)",
+     "cause": "sd_loosen wrong bit"
+    }
+   ],
+   "metrics": {
+    "time_s": 880.0,
+    "actions": 36,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 15,
+    "damage_events": 2,
+    "classifier_interventions": 3,
+    "classifier_flags": 2,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "phillips",
+     "torque": null,
+     "bit_loads": 1,
+     "bit_unloads": 0,
+     "torque_sets": 0,
+     "drive_calls": 4
+    },
+    "screwdriver_overhead_calls": 1,
+    "fasteners_tracked": 0,
+    "fm_events": 3,
+    "diagnostics": {
+     "calls": 1,
+     "nonwhitelisted": 1
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": false,
+     "taps": 0,
+     "swipes": 0,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 0
+   },
+   "fm_sequence": {
+    "begin_ok": true,
+    "verify_accounted": true,
+    "close_ok": true,
+    "reset_ok": true,
+    "verify_detail": {
+     "accounted": true,
+     "reinstalled": 0,
+     "on_mat": [],
+     "in_transit": [],
+     "quarantined": [],
+     "lost": [],
+     "open_holes": [],
+     "foreign_screws_present": [],
+     "detail": []
+    }
+   },
+   "transcript": "transcripts/sloppy-marathon-Normal-iphone14pm-battery-m1-seed5025.jsonl",
+   "quartile_stats": {
+    "first_quartile": {
+     "pass_rate": 0.0,
+     "avg_errors": 15.0,
+     "avg_damage": 2.0
+    },
+    "last_quartile": {
+     "pass_rate": 0.0,
+     "avg_errors": 17.0,
+     "avg_damage": 2.0
+    }
+   },
+   "drift": {
+    "interventions_total": 12,
+    "error_burden_first_half": 19.5,
+    "error_burden_second_half": 19.5,
+    "error_trend": 0.0
+   }
+  },
+  {
+   "policy": "sloppy",
+   "mode": "marathon",
+   "tier": "Normal",
+   "job": "iphone14pm-battery-m2",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": false,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": false,
+    "no_damage": false,
+    "no_new_scratches": true,
+    "no_new_smudges": true
+   },
+   "disqualifiers": [
+    "Normal: repair_complete failed",
+    "Normal: no_damage failed",
+    "marathon boundary: fm verify/close/reset did not complete clean (screws unaccounted or mat not reset)"
+   ],
+   "damage_log": [
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out (bit 'phillips' on 'pentalobe' screw)",
+     "cause": "sd_loosen wrong bit"
+    }
+   ],
+   "metrics": {
+    "time_s": 880.0,
+    "actions": 36,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 18,
+    "damage_events": 1,
+    "classifier_interventions": 3,
+    "classifier_flags": 2,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "phillips",
+     "torque": null,
+     "bit_loads": 1,
+     "bit_unloads": 0,
+     "torque_sets": 0,
+     "drive_calls": 8
+    },
+    "screwdriver_overhead_calls": 1,
+    "fasteners_tracked": 0,
+    "fm_events": 5,
+    "diagnostics": {
+     "calls": 1,
+     "nonwhitelisted": 1
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": false,
+     "taps": 0,
+     "swipes": 0,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 0
+   },
+   "fm_sequence": {
+    "begin_ok": true,
+    "verify_accounted": false,
+    "close_ok": false,
+    "reset_ok": true,
+    "verify_detail": {
+     "accounted": false,
+     "reinstalled": 0,
+     "on_mat": [],
+     "in_transit": [],
+     "quarantined": [],
+     "lost": [],
+     "open_holes": [],
+     "foreign_screws_present": [],
+     "detail": [
+      "unrecorded removals (loosened, never registered): ['display[0]']"
+     ]
+    }
+   },
+   "transcript": "transcripts/sloppy-marathon-Normal-iphone14pm-battery-m2-seed5026.jsonl",
+   "quartile_stats": {
+    "first_quartile": {
+     "pass_rate": 0.0,
+     "avg_errors": 15.0,
+     "avg_damage": 2.0
+    },
+    "last_quartile": {
+     "pass_rate": 0.0,
+     "avg_errors": 17.0,
+     "avg_damage": 2.0
+    }
+   },
+   "drift": {
+    "interventions_total": 12,
+    "error_burden_first_half": 19.5,
+    "error_burden_second_half": 19.5,
+    "error_trend": 0.0
+   }
+  },
+  {
+   "policy": "sloppy",
+   "mode": "marathon",
+   "tier": "Normal",
+   "job": "iphone14pm-battery-m3",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": false,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": false,
+    "no_damage": false,
+    "no_new_scratches": true,
+    "no_new_smudges": true
+   },
+   "disqualifiers": [
+    "Normal: repair_complete failed",
+    "Normal: no_damage failed"
+   ],
+   "damage_log": [
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out (bit 'phillips' on 'pentalobe' screw)",
+     "cause": "sd_loosen wrong bit"
+    },
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out (bit 'phillips' on 'pentalobe' screw)",
+     "cause": "sd_loosen wrong bit"
+    }
+   ],
+   "metrics": {
+    "time_s": 880.0,
+    "actions": 36,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 16,
+    "damage_events": 2,
+    "classifier_interventions": 3,
+    "classifier_flags": 2,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "phillips",
+     "torque": null,
+     "bit_loads": 1,
+     "bit_unloads": 0,
+     "torque_sets": 0,
+     "drive_calls": 12
+    },
+    "screwdriver_overhead_calls": 1,
+    "fasteners_tracked": 0,
+    "fm_events": 8,
+    "diagnostics": {
+     "calls": 1,
+     "nonwhitelisted": 1
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": false,
+     "taps": 0,
+     "swipes": 0,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 0
+   },
+   "fm_sequence": {
+    "begin_ok": true,
+    "verify_accounted": true,
+    "close_ok": true,
+    "reset_ok": true,
+    "verify_detail": {
+     "accounted": true,
+     "reinstalled": 0,
+     "on_mat": [],
+     "in_transit": [],
+     "quarantined": [],
+     "lost": [],
+     "open_holes": [],
+     "foreign_screws_present": [],
+     "detail": []
+    }
+   },
+   "transcript": "transcripts/sloppy-marathon-Normal-iphone14pm-battery-m3-seed5027.jsonl",
+   "quartile_stats": {
+    "first_quartile": {
+     "pass_rate": 0.0,
+     "avg_errors": 15.0,
+     "avg_damage": 2.0
+    },
+    "last_quartile": {
+     "pass_rate": 0.0,
+     "avg_errors": 17.0,
+     "avg_damage": 2.0
+    }
+   },
+   "drift": {
+    "interventions_total": 12,
+    "error_burden_first_half": 19.5,
+    "error_burden_second_half": 19.5,
+    "error_trend": 0.0
+   }
+  },
+  {
+   "policy": "sloppy",
+   "mode": "marathon",
+   "tier": "Normal",
+   "job": "iphone14pm-battery-m4",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": false,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": false,
+    "no_damage": false,
+    "no_new_scratches": true,
+    "no_new_smudges": true
+   },
+   "disqualifiers": [
+    "Normal: repair_complete failed",
+    "Normal: no_damage failed",
+    "marathon boundary: fm verify/close/reset did not complete clean (screws unaccounted or mat not reset)"
+   ],
+   "damage_log": [
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out (bit 'phillips' on 'pentalobe' screw)",
+     "cause": "sd_loosen wrong bit"
+    },
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out on tighten",
+     "cause": "sd_tighten wrong bit"
+    }
+   ],
+   "metrics": {
+    "time_s": 880.0,
+    "actions": 36,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 17,
+    "damage_events": 2,
+    "classifier_interventions": 3,
+    "classifier_flags": 2,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "phillips",
+     "torque": null,
+     "bit_loads": 1,
+     "bit_unloads": 0,
+     "torque_sets": 0,
+     "drive_calls": 16
+    },
+    "screwdriver_overhead_calls": 1,
+    "fasteners_tracked": 0,
+    "fm_events": 10,
+    "diagnostics": {
+     "calls": 1,
+     "nonwhitelisted": 1
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": false,
+     "taps": 0,
+     "swipes": 0,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 0
+   },
+   "fm_sequence": {
+    "begin_ok": true,
+    "verify_accounted": false,
+    "close_ok": false,
+    "reset_ok": true,
+    "verify_detail": {
+     "accounted": false,
+     "reinstalled": 0,
+     "on_mat": [],
+     "in_transit": [],
+     "quarantined": [],
+     "lost": [],
+     "open_holes": [],
+     "foreign_screws_present": [],
+     "detail": [
+      "unrecorded removals (loosened, never registered): ['display[0]']"
+     ]
+    }
+   },
+   "transcript": "transcripts/sloppy-marathon-Normal-iphone14pm-battery-m4-seed5028.jsonl",
+   "quartile_stats": {
+    "first_quartile": {
+     "pass_rate": 0.0,
+     "avg_errors": 15.0,
+     "avg_damage": 2.0
+    },
+    "last_quartile": {
+     "pass_rate": 0.0,
+     "avg_errors": 17.0,
+     "avg_damage": 2.0
+    }
+   },
+   "drift": {
+    "interventions_total": 12,
+    "error_burden_first_half": 19.5,
+    "error_burden_second_half": 19.5,
+    "error_trend": 0.0
+   }
+  },
+  {
+   "policy": "sloppy",
+   "mode": "marathon",
+   "tier": "High",
+   "job": "iphone14pm-battery-m1",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": false,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": false,
+    "no_damage": false,
+    "no_new_scratches": true,
+    "no_new_smudges": true,
+    "unlocks": false,
+    "activates": false,
+    "no_unrequested_restore": false,
+    "no_unrequested_update": false,
+    "user_data_unchanged": false,
+    "standard_testing_only": false
+   },
+   "disqualifiers": [
+    "Normal: repair_complete failed",
+    "Normal: no_damage failed",
+    "High: unlocks failed",
+    "High: activates failed",
+    "High: no_unrequested_restore failed",
+    "High: no_unrequested_update failed",
+    "High: user_data_unchanged failed",
+    "High: standard_testing_only failed"
+   ],
+   "damage_log": [
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out (bit 'phillips' on 'pentalobe' screw)",
+     "cause": "sd_loosen wrong bit"
+    },
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out (bit 'phillips' on 'pentalobe' screw)",
+     "cause": "sd_loosen wrong bit"
+    }
+   ],
+   "metrics": {
+    "time_s": 880.0,
+    "actions": 36,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 15,
+    "damage_events": 2,
+    "classifier_interventions": 3,
+    "classifier_flags": 2,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "phillips",
+     "torque": null,
+     "bit_loads": 1,
+     "bit_unloads": 0,
+     "torque_sets": 0,
+     "drive_calls": 4
+    },
+    "screwdriver_overhead_calls": 1,
+    "fasteners_tracked": 0,
+    "fm_events": 3,
+    "diagnostics": {
+     "calls": 1,
+     "nonwhitelisted": 1
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": false,
+     "taps": 0,
+     "swipes": 0,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 0
+   },
+   "fm_sequence": {
+    "begin_ok": true,
+    "verify_accounted": true,
+    "close_ok": true,
+    "reset_ok": true,
+    "verify_detail": {
+     "accounted": true,
+     "reinstalled": 0,
+     "on_mat": [],
+     "in_transit": [],
+     "quarantined": [],
+     "lost": [],
+     "open_holes": [],
+     "foreign_screws_present": [],
+     "detail": []
+    }
+   },
+   "transcript": "transcripts/sloppy-marathon-High-iphone14pm-battery-m1-seed5029.jsonl",
+   "quartile_stats": {
+    "first_quartile": {
+     "pass_rate": 0.0,
+     "avg_errors": 15.0,
+     "avg_damage": 2.0
+    },
+    "last_quartile": {
+     "pass_rate": 0.0,
+     "avg_errors": 16.0,
+     "avg_damage": 2.0
+    }
+   },
+   "drift": {
+    "interventions_total": 12,
+    "error_burden_first_half": 19.5,
+    "error_burden_second_half": 19.5,
+    "error_trend": 0.0
+   }
+  },
+  {
+   "policy": "sloppy",
+   "mode": "marathon",
+   "tier": "High",
+   "job": "iphone14pm-battery-m2",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": false,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": false,
+    "no_damage": false,
+    "no_new_scratches": true,
+    "no_new_smudges": true,
+    "unlocks": false,
+    "activates": false,
+    "no_unrequested_restore": false,
+    "no_unrequested_update": false,
+    "user_data_unchanged": false,
+    "standard_testing_only": false
+   },
+   "disqualifiers": [
+    "Normal: repair_complete failed",
+    "Normal: no_damage failed",
+    "High: unlocks failed",
+    "High: activates failed",
+    "High: no_unrequested_restore failed",
+    "High: no_unrequested_update failed",
+    "High: user_data_unchanged failed",
+    "High: standard_testing_only failed",
+    "marathon boundary: fm verify/close/reset did not complete clean (screws unaccounted or mat not reset)"
+   ],
+   "damage_log": [
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out (bit 'phillips' on 'pentalobe' screw)",
+     "cause": "sd_loosen wrong bit"
+    }
+   ],
+   "metrics": {
+    "time_s": 880.0,
+    "actions": 36,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 18,
+    "damage_events": 1,
+    "classifier_interventions": 3,
+    "classifier_flags": 2,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "phillips",
+     "torque": null,
+     "bit_loads": 1,
+     "bit_unloads": 0,
+     "torque_sets": 0,
+     "drive_calls": 8
+    },
+    "screwdriver_overhead_calls": 1,
+    "fasteners_tracked": 0,
+    "fm_events": 5,
+    "diagnostics": {
+     "calls": 1,
+     "nonwhitelisted": 1
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": false,
+     "taps": 0,
+     "swipes": 0,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 0
+   },
+   "fm_sequence": {
+    "begin_ok": true,
+    "verify_accounted": false,
+    "close_ok": false,
+    "reset_ok": true,
+    "verify_detail": {
+     "accounted": false,
+     "reinstalled": 0,
+     "on_mat": [],
+     "in_transit": [],
+     "quarantined": [],
+     "lost": [],
+     "open_holes": [],
+     "foreign_screws_present": [],
+     "detail": [
+      "unrecorded removals (loosened, never registered): ['display[1]']"
+     ]
+    }
+   },
+   "transcript": "transcripts/sloppy-marathon-High-iphone14pm-battery-m2-seed5030.jsonl",
+   "quartile_stats": {
+    "first_quartile": {
+     "pass_rate": 0.0,
+     "avg_errors": 15.0,
+     "avg_damage": 2.0
+    },
+    "last_quartile": {
+     "pass_rate": 0.0,
+     "avg_errors": 16.0,
+     "avg_damage": 2.0
+    }
+   },
+   "drift": {
+    "interventions_total": 12,
+    "error_burden_first_half": 19.5,
+    "error_burden_second_half": 19.5,
+    "error_trend": 0.0
+   }
+  },
+  {
+   "policy": "sloppy",
+   "mode": "marathon",
+   "tier": "High",
+   "job": "iphone14pm-battery-m3",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": false,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": false,
+    "no_damage": false,
+    "no_new_scratches": true,
+    "no_new_smudges": true,
+    "unlocks": false,
+    "activates": false,
+    "no_unrequested_restore": false,
+    "no_unrequested_update": false,
+    "user_data_unchanged": false,
+    "standard_testing_only": false
+   },
+   "disqualifiers": [
+    "Normal: repair_complete failed",
+    "Normal: no_damage failed",
+    "High: unlocks failed",
+    "High: activates failed",
+    "High: no_unrequested_restore failed",
+    "High: no_unrequested_update failed",
+    "High: user_data_unchanged failed",
+    "High: standard_testing_only failed",
+    "marathon boundary: fm verify/close/reset did not complete clean (screws unaccounted or mat not reset)"
+   ],
+   "damage_log": [
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out (bit 'phillips' on 'pentalobe' screw)",
+     "cause": "sd_loosen wrong bit"
+    },
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out on tighten",
+     "cause": "sd_tighten wrong bit"
+    }
+   ],
+   "metrics": {
+    "time_s": 880.0,
+    "actions": 36,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 17,
+    "damage_events": 2,
+    "classifier_interventions": 3,
+    "classifier_flags": 2,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "phillips",
+     "torque": null,
+     "bit_loads": 1,
+     "bit_unloads": 0,
+     "torque_sets": 0,
+     "drive_calls": 12
+    },
+    "screwdriver_overhead_calls": 1,
+    "fasteners_tracked": 0,
+    "fm_events": 7,
+    "diagnostics": {
+     "calls": 1,
+     "nonwhitelisted": 1
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": false,
+     "taps": 0,
+     "swipes": 0,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 0
+   },
+   "fm_sequence": {
+    "begin_ok": true,
+    "verify_accounted": false,
+    "close_ok": false,
+    "reset_ok": true,
+    "verify_detail": {
+     "accounted": false,
+     "reinstalled": 0,
+     "on_mat": [],
+     "in_transit": [],
+     "quarantined": [],
+     "lost": [],
+     "open_holes": [],
+     "foreign_screws_present": [],
+     "detail": [
+      "unrecorded removals (loosened, never registered): ['display[0]']"
+     ]
+    }
+   },
+   "transcript": "transcripts/sloppy-marathon-High-iphone14pm-battery-m3-seed5031.jsonl",
+   "quartile_stats": {
+    "first_quartile": {
+     "pass_rate": 0.0,
+     "avg_errors": 15.0,
+     "avg_damage": 2.0
+    },
+    "last_quartile": {
+     "pass_rate": 0.0,
+     "avg_errors": 16.0,
+     "avg_damage": 2.0
+    }
+   },
+   "drift": {
+    "interventions_total": 12,
+    "error_burden_first_half": 19.5,
+    "error_burden_second_half": 19.5,
+    "error_trend": 0.0
+   }
+  },
+  {
+   "policy": "sloppy",
+   "mode": "marathon",
+   "tier": "High",
+   "job": "iphone14pm-battery-m4",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": false,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": false,
+    "no_damage": false,
+    "no_new_scratches": true,
+    "no_new_smudges": true,
+    "unlocks": false,
+    "activates": false,
+    "no_unrequested_restore": false,
+    "no_unrequested_update": false,
+    "user_data_unchanged": false,
+    "standard_testing_only": false
+   },
+   "disqualifiers": [
+    "Normal: repair_complete failed",
+    "Normal: no_damage failed",
+    "High: unlocks failed",
+    "High: activates failed",
+    "High: no_unrequested_restore failed",
+    "High: no_unrequested_update failed",
+    "High: user_data_unchanged failed",
+    "High: standard_testing_only failed"
+   ],
+   "damage_log": [
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out (bit 'phillips' on 'pentalobe' screw)",
+     "cause": "sd_loosen wrong bit"
+    },
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out (bit 'phillips' on 'pentalobe' screw)",
+     "cause": "sd_loosen wrong bit"
+    }
+   ],
+   "metrics": {
+    "time_s": 880.0,
+    "actions": 36,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 16,
+    "damage_events": 2,
+    "classifier_interventions": 3,
+    "classifier_flags": 2,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "phillips",
+     "torque": null,
+     "bit_loads": 1,
+     "bit_unloads": 0,
+     "torque_sets": 0,
+     "drive_calls": 16
+    },
+    "screwdriver_overhead_calls": 1,
+    "fasteners_tracked": 0,
+    "fm_events": 10,
+    "diagnostics": {
+     "calls": 1,
+     "nonwhitelisted": 1
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": false,
+     "taps": 0,
+     "swipes": 0,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 0
+   },
+   "fm_sequence": {
+    "begin_ok": true,
+    "verify_accounted": true,
+    "close_ok": true,
+    "reset_ok": true,
+    "verify_detail": {
+     "accounted": true,
+     "reinstalled": 0,
+     "on_mat": [],
+     "in_transit": [],
+     "quarantined": [],
+     "lost": [],
+     "open_holes": [],
+     "foreign_screws_present": [],
+     "detail": []
+    }
+   },
+   "transcript": "transcripts/sloppy-marathon-High-iphone14pm-battery-m4-seed5032.jsonl",
+   "quartile_stats": {
+    "first_quartile": {
+     "pass_rate": 0.0,
+     "avg_errors": 15.0,
+     "avg_damage": 2.0
+    },
+    "last_quartile": {
+     "pass_rate": 0.0,
+     "avg_errors": 16.0,
+     "avg_damage": 2.0
+    }
+   },
+   "drift": {
+    "interventions_total": 12,
+    "error_burden_first_half": 19.5,
+    "error_burden_second_half": 19.5,
+    "error_trend": 0.0
+   }
+  },
+  {
+   "policy": "sloppy",
+   "mode": "marathon",
+   "tier": "Max",
+   "job": "iphone14pm-battery-m1",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": false,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": false,
+    "no_damage": true,
+    "no_new_scratches": true,
+    "no_new_smudges": true,
+    "unlocks": false,
+    "activates": false,
+    "no_unrequested_restore": false,
+    "no_unrequested_update": false,
+    "user_data_unchanged": false,
+    "standard_testing_only": false,
+    "os_not_updated": false,
+    "battery_at_50": true,
+    "at_most_one_verification_cycle": true,
+    "settings_unchanged": false,
+    "zero_fingerprints": false
+   },
+   "disqualifiers": [
+    "Normal: repair_complete failed",
+    "High: unlocks failed",
+    "High: activates failed",
+    "High: no_unrequested_restore failed",
+    "High: no_unrequested_update failed",
+    "High: user_data_unchanged failed",
+    "High: standard_testing_only failed",
+    "Max: os_not_updated failed",
+    "Max: settings_unchanged failed",
+    "Max: zero_fingerprints failed",
+    "marathon boundary: fm verify/close/reset did not complete clean (screws unaccounted or mat not reset)"
+   ],
+   "damage_log": [],
+   "metrics": {
+    "time_s": 880.0,
+    "actions": 36,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 17,
+    "damage_events": 0,
+    "classifier_interventions": 3,
+    "classifier_flags": 2,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "phillips",
+     "torque": null,
+     "bit_loads": 1,
+     "bit_unloads": 0,
+     "torque_sets": 0,
+     "drive_calls": 4
+    },
+    "screwdriver_overhead_calls": 1,
+    "fasteners_tracked": 0,
+    "fm_events": 2,
+    "diagnostics": {
+     "calls": 1,
+     "nonwhitelisted": 1
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": false,
+     "taps": 0,
+     "swipes": 0,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 0
+   },
+   "fm_sequence": {
+    "begin_ok": true,
+    "verify_accounted": false,
+    "close_ok": false,
+    "reset_ok": true,
+    "verify_detail": {
+     "accounted": false,
+     "reinstalled": 0,
+     "on_mat": [],
+     "in_transit": [],
+     "quarantined": [],
+     "lost": [],
+     "open_holes": [],
+     "foreign_screws_present": [],
+     "detail": [
+      "unrecorded removals (loosened, never registered): ['display[0]', 'display[1]']"
+     ]
+    }
+   },
+   "transcript": "transcripts/sloppy-marathon-Max-iphone14pm-battery-m1-seed5033.jsonl",
+   "quartile_stats": {
+    "first_quartile": {
+     "pass_rate": 0.0,
+     "avg_errors": 17.0,
+     "avg_damage": 0.0
+    },
+    "last_quartile": {
+     "pass_rate": 0.0,
+     "avg_errors": 17.0,
+     "avg_damage": 2.0
+    }
+   },
+   "drift": {
+    "interventions_total": 12,
+    "error_burden_first_half": 19.5,
+    "error_burden_second_half": 19.5,
+    "error_trend": 0.0
+   }
+  },
+  {
+   "policy": "sloppy",
+   "mode": "marathon",
+   "tier": "Max",
+   "job": "iphone14pm-battery-m2",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": false,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": false,
+    "no_damage": false,
+    "no_new_scratches": true,
+    "no_new_smudges": true,
+    "unlocks": false,
+    "activates": false,
+    "no_unrequested_restore": false,
+    "no_unrequested_update": false,
+    "user_data_unchanged": false,
+    "standard_testing_only": false,
+    "os_not_updated": false,
+    "battery_at_50": true,
+    "at_most_one_verification_cycle": true,
+    "settings_unchanged": false,
+    "zero_fingerprints": false
+   },
+   "disqualifiers": [
+    "Normal: repair_complete failed",
+    "Normal: no_damage failed",
+    "High: unlocks failed",
+    "High: activates failed",
+    "High: no_unrequested_restore failed",
+    "High: no_unrequested_update failed",
+    "High: user_data_unchanged failed",
+    "High: standard_testing_only failed",
+    "Max: os_not_updated failed",
+    "Max: settings_unchanged failed",
+    "Max: zero_fingerprints failed",
+    "marathon boundary: fm verify/close/reset did not complete clean (screws unaccounted or mat not reset)"
+   ],
+   "damage_log": [
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out on tighten",
+     "cause": "sd_tighten wrong bit"
+    },
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out on tighten",
+     "cause": "sd_tighten wrong bit"
+    }
+   ],
+   "metrics": {
+    "time_s": 880.0,
+    "actions": 36,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 16,
+    "damage_events": 2,
+    "classifier_interventions": 3,
+    "classifier_flags": 2,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "phillips",
+     "torque": null,
+     "bit_loads": 1,
+     "bit_unloads": 0,
+     "torque_sets": 0,
+     "drive_calls": 8
+    },
+    "screwdriver_overhead_calls": 1,
+    "fasteners_tracked": 0,
+    "fm_events": 4,
+    "diagnostics": {
+     "calls": 1,
+     "nonwhitelisted": 1
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": false,
+     "taps": 0,
+     "swipes": 0,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 0
+   },
+   "fm_sequence": {
+    "begin_ok": true,
+    "verify_accounted": false,
+    "close_ok": false,
+    "reset_ok": true,
+    "verify_detail": {
+     "accounted": false,
+     "reinstalled": 0,
+     "on_mat": [],
+     "in_transit": [],
+     "quarantined": [],
+     "lost": [],
+     "open_holes": [],
+     "foreign_screws_present": [],
+     "detail": [
+      "unrecorded removals (loosened, never registered): ['display[0]', 'display[1]']"
+     ]
+    }
+   },
+   "transcript": "transcripts/sloppy-marathon-Max-iphone14pm-battery-m2-seed5034.jsonl",
+   "quartile_stats": {
+    "first_quartile": {
+     "pass_rate": 0.0,
+     "avg_errors": 17.0,
+     "avg_damage": 0.0
+    },
+    "last_quartile": {
+     "pass_rate": 0.0,
+     "avg_errors": 17.0,
+     "avg_damage": 2.0
+    }
+   },
+   "drift": {
+    "interventions_total": 12,
+    "error_burden_first_half": 19.5,
+    "error_burden_second_half": 19.5,
+    "error_trend": 0.0
+   }
+  },
+  {
+   "policy": "sloppy",
+   "mode": "marathon",
+   "tier": "Max",
+   "job": "iphone14pm-battery-m3",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": false,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": false,
+    "no_damage": false,
+    "no_new_scratches": true,
+    "no_new_smudges": true,
+    "unlocks": false,
+    "activates": false,
+    "no_unrequested_restore": false,
+    "no_unrequested_update": false,
+    "user_data_unchanged": false,
+    "standard_testing_only": false,
+    "os_not_updated": false,
+    "battery_at_50": false,
+    "at_most_one_verification_cycle": true,
+    "settings_unchanged": false,
+    "zero_fingerprints": false
+   },
+   "disqualifiers": [
+    "Normal: repair_complete failed",
+    "Normal: no_damage failed",
+    "High: unlocks failed",
+    "High: activates failed",
+    "High: no_unrequested_restore failed",
+    "High: no_unrequested_update failed",
+    "High: user_data_unchanged failed",
+    "High: standard_testing_only failed",
+    "Max: os_not_updated failed",
+    "Max: battery_at_50 failed",
+    "Max: settings_unchanged failed",
+    "Max: zero_fingerprints failed"
+   ],
+   "damage_log": [
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out (bit 'phillips' on 'pentalobe' screw)",
+     "cause": "sd_loosen wrong bit"
+    },
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out (bit 'phillips' on 'pentalobe' screw)",
+     "cause": "sd_loosen wrong bit"
+    }
+   ],
+   "metrics": {
+    "time_s": 880.0,
+    "actions": 36,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 16,
+    "damage_events": 2,
+    "classifier_interventions": 3,
+    "classifier_flags": 2,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "phillips",
+     "torque": null,
+     "bit_loads": 1,
+     "bit_unloads": 0,
+     "torque_sets": 0,
+     "drive_calls": 12
+    },
+    "screwdriver_overhead_calls": 1,
+    "fasteners_tracked": 0,
+    "fm_events": 7,
+    "diagnostics": {
+     "calls": 1,
+     "nonwhitelisted": 1
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": false,
+     "taps": 0,
+     "swipes": 0,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 0
+   },
+   "fm_sequence": {
+    "begin_ok": true,
+    "verify_accounted": true,
+    "close_ok": true,
+    "reset_ok": true,
+    "verify_detail": {
+     "accounted": true,
+     "reinstalled": 0,
+     "on_mat": [],
+     "in_transit": [],
+     "quarantined": [],
+     "lost": [],
+     "open_holes": [],
+     "foreign_screws_present": [],
+     "detail": []
+    }
+   },
+   "transcript": "transcripts/sloppy-marathon-Max-iphone14pm-battery-m3-seed5035.jsonl",
+   "quartile_stats": {
+    "first_quartile": {
+     "pass_rate": 0.0,
+     "avg_errors": 17.0,
+     "avg_damage": 0.0
+    },
+    "last_quartile": {
+     "pass_rate": 0.0,
+     "avg_errors": 17.0,
+     "avg_damage": 2.0
+    }
+   },
+   "drift": {
+    "interventions_total": 12,
+    "error_burden_first_half": 19.5,
+    "error_burden_second_half": 19.5,
+    "error_trend": 0.0
+   }
+  },
+  {
+   "policy": "sloppy",
+   "mode": "marathon",
+   "tier": "Max",
+   "job": "iphone14pm-battery-m4",
+   "category": "standard",
+   "variant_notes": [],
+   "passed": false,
+   "gate_checks": {
+    "powers_on": true,
+    "repair_complete": false,
+    "no_damage": false,
+    "no_new_scratches": true,
+    "no_new_smudges": true,
+    "unlocks": false,
+    "activates": false,
+    "no_unrequested_restore": false,
+    "no_unrequested_update": false,
+    "user_data_unchanged": false,
+    "standard_testing_only": false,
+    "os_not_updated": false,
+    "battery_at_50": false,
+    "at_most_one_verification_cycle": true,
+    "settings_unchanged": false,
+    "zero_fingerprints": false
+   },
+   "disqualifiers": [
+    "Normal: repair_complete failed",
+    "Normal: no_damage failed",
+    "High: unlocks failed",
+    "High: activates failed",
+    "High: no_unrequested_restore failed",
+    "High: no_unrequested_update failed",
+    "High: user_data_unchanged failed",
+    "High: standard_testing_only failed",
+    "Max: os_not_updated failed",
+    "Max: battery_at_50 failed",
+    "Max: settings_unchanged failed",
+    "Max: zero_fingerprints failed",
+    "marathon boundary: fm verify/close/reset did not complete clean (screws unaccounted or mat not reset)"
+   ],
+   "damage_log": [
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out (bit 'phillips' on 'pentalobe' screw)",
+     "cause": "sd_loosen wrong bit"
+    },
+    {
+     "part": "display",
+     "description": "screw P2 6.8mm head stripped by cam-out on tighten",
+     "cause": "sd_tighten wrong bit"
+    }
+   ],
+   "metrics": {
+    "time_s": 880.0,
+    "actions": 36,
+    "tool_changes": 5,
+    "rework": 0,
+    "errors": 17,
+    "damage_events": 2,
+    "classifier_interventions": 3,
+    "classifier_flags": 2,
+    "supervisor_consultations": 0,
+    "screwdriver": {
+     "loaded_bit": "phillips",
+     "torque": null,
+     "bit_loads": 1,
+     "bit_unloads": 0,
+     "torque_sets": 0,
+     "drive_calls": 16
+    },
+    "screwdriver_overhead_calls": 1,
+    "fasteners_tracked": 0,
+    "fm_events": 9,
+    "diagnostics": {
+     "calls": 1,
+     "nonwhitelisted": 1
+    },
+    "display_touch": {
+     "mirror_connected": false,
+     "tool_mounted": false,
+     "taps": 0,
+     "swipes": 0,
+     "long_presses": 0,
+     "blind_touches": 0,
+     "missed_touches": 0,
+     "stale_frame_events": 0
+    },
+    "wipes_used": 0
+   },
+   "fm_sequence": {
+    "begin_ok": true,
+    "verify_accounted": false,
+    "close_ok": false,
+    "reset_ok": true,
+    "verify_detail": {
+     "accounted": false,
+     "reinstalled": 0,
+     "on_mat": [],
+     "in_transit": [],
+     "quarantined": [],
+     "lost": [],
+     "open_holes": [],
+     "foreign_screws_present": [],
+     "detail": [
+      "unrecorded removals (loosened, never registered): ['display[0]']"
+     ]
+    }
+   },
+   "transcript": "transcripts/sloppy-marathon-Max-iphone14pm-battery-m4-seed5036.jsonl",
+   "quartile_stats": {
+    "first_quartile": {
+     "pass_rate": 0.0,
+     "avg_errors": 17.0,
+     "avg_damage": 0.0
+    },
+    "last_quartile": {
+     "pass_rate": 0.0,
+     "avg_errors": 17.0,
+     "avg_damage": 2.0
+    }
+   },
+   "drift": {
+    "interventions_total": 12,
+    "error_burden_first_half": 19.5,
+    "error_burden_second_half": 19.5,
+    "error_trend": 0.0
+   }
+  }
+ ]
+}

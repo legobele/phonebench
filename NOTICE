@@ -1,0 +1,36 @@
+PhoneBench
+Copyright 2026 Nivelato Labs
+
+This benchmark's simulator code and tool specifications are original
+work, released under the Apache License, Version 2.0 (see LICENSE).
+
+DEVICE DATA ATTRIBUTION
+
+The device parameterizations in sim/jobs.py (screw layouts, removal
+order, fastener specs, sourced-vs-UNSOURCED parameter lists) derive
+from repair guides and teardowns published by iFixit:
+
+  - iPhone 14 Pro Max battery replacement — iFixit guide 153006
+  - iPhone 14 Pro Max rear camera replacement — iFixit guide 153334
+  - Samsung Galaxy Note7 teardown — iFixit guide 66389
+  - iPad Pro 11-inch (M1) battery replacement — iFixit guide 151810
+
+iFixit publishes its guides under Creative Commons BY-NC-SA. Measured
+facts taken from those guides (screw sizes, removal order) are cited
+in sim/jobs.py with explicit sourced-vs-UNSOURCED lists; parameters
+no source states are marked UNSOURCED there rather than invented.
+This NOTICE is the attribution for that derived data.
+
+SAMPLE RESULTS
+
+The scorecards and transcripts under results/ are published as sample
+results of the benchmark's first live runs, so that other benchmarkers
+can see exactly what a PhoneBench run produces and what its reporting
+looks like. They are covered by the same Apache-2.0 license as the
+code; the live transcripts are gzip-compressed JSONL under
+results/samples/.
+
+Product names (iPhone, iPad, Samsung Galaxy Note7, Apple part numbers)
+are used descriptively, to identify the devices the simulated jobs are
+parameterized from. No affiliation with or endorsement by Apple,
+Samsung, or iFixit is claimed.
