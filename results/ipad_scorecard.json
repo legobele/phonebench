@@ -7,7 +7,7 @@
   "seed": 7,
   "run_mode": "live worker subagent as operator (briefed as an operator only)",
   "transcript": "transcripts/live-agent-autonomous-Max-ipad-pro-11-m1-battery-seed7.jsonl",
-  "verdict": "PASS at all tiers; diagnosis CORRECT; no oven penalty (run passed)",
+  "verdict": "Not triggered (run passed)",
   "diagnosis": {
     "verdict": "correct",
     "detail": "declared before repair and names the true cause (the battery / its cell)",

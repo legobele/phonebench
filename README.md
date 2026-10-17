@@ -30,11 +30,6 @@ What makes it different:
 - **Diagnosis is tested, not just repair.** The iPad scenario arrives
   dead: diagnose the no-boot through a closed diagnostic whitelist,
   declare the cause on the record, then repair it.
-- **Hostile environments are first-class scenarios.** THE PUNISHMENT
-  (a battery swap inside a 400°F oven, while charging) and THE FREEZER
-  (a battery swap at −40°F against three freezing clocks and a
-  deliberately under-instrumented power system) measure judgment when
-  the correct move might be to refuse, abort, or race the cold.
 
 The simulation is a working, stdlib-only Python model of the arm, the
 bench, and the phones — no rendering, no 3D: an action API, quality
@@ -107,15 +102,13 @@ reproduce the pre-ruling behaviour exactly.
 | `sim/gates.py` | Quality gates Normal / High / Max, exactly as specced; absolute (a disqualifier fails the job at any speed), judged against the entry snapshot. |
 | `sim/policies.py` | `CarefulPolicy`, `SloppyPolicy`, and `GuidePolicy` (Manual mode instructions). Policies read everything from `observe()` — no memorized template — which is what lets them face novel devices. |
 | `sim/runner.py` | Modes (autonomous, semi_auto with supervisor hook, manual with a simulated human executor + technician review, marathon with drift and first/last-quartile variance), scorecard aggregation with standard vs **novel-device** lines kept separate. |
-| `sim/environment.py`, `sim/punishment.py` | THE PUNISHMENT: oven + breakout cradle environment model, scenario arm, two-reading scorer. |
-| `sim/freezer.py` | THE FREEZER: cold-soak environment, bench power systems, hidden backup cell, scenario arm + scorer. |
 | `sim/diagnosis.py` | Diagnosis-first fault layer + diagnosis scoring for the iPad scenario. |
 | `run_benchmark.py` | CLI for the standard + novel benchmark. |
 | `run_iphone14pm.py` | Scripted scorecard: careful + sloppy × autonomous/semi-auto/marathon × Normal/High/Max on the 14 Pro Max battery job. |
 | `session_driver.py` | Live session driver: holds one 14 Pro Max session (autonomous conditions) and serves the full action API as JSON-lines over stdin or a file mailbox (`--mailbox DIR`). Used for live agent runs. |
-| `freezer_driver.py`, `punishment_driver.py`, `ipad_driver.py` | Live session drivers for the named scenarios; same protocol. |
+| `ipad_driver.py` | Live session driver for the diagnosis-first scenario; same protocol. |
 | `examples/operator_client.py` | Reference operator client: plug your own model into a live session. |
-| `tests/` | 246 tests: gate logic per tier, entry-condition judging, screwdriver state machine, classifier blocking, marathon handling, novel-device adaptation, the spec mechanisms (diagnostic whitelist latch, verification-cycle rules, fm identity/long-screw/spares/custody, cleaning matrix, display touch), plus the freezer, punishment, and diagnosis suites. |
+| `tests/` | 246 tests: gate logic per tier, entry-condition judging, screwdriver state machine, classifier blocking, marathon handling, novel-device adaptation, the spec mechanisms (diagnostic whitelist latch, verification-cycle rules, fm identity/long-screw/spares/custody, cleaning matrix, display touch), plus the diagnosis suite. |
 
 ## The screwdriver is a managed tool
 
@@ -214,121 +207,6 @@ classifier-blocked.
 On the iPhone 14 Pro Max battery job (`run_iphone14pm.py`), careful
 passes every mode × tier cell and sloppy fails every cell; see
 `results/iphone14pm_scorecard.md`.
-
-## Named scenario: THE PUNISHMENT
-
-The hostile-environment scenario (`BENCHMARK.md`, "Named scenario:
-THE PUNISHMENT"), implemented in `sim/environment.py` (oven +
-magnetic breakout cradle), `sim/punishment.py` (scenario arm + the
-two-reading scorer), and `punishment_driver.py` (live session driver,
-same mailbox protocol). The device is a Samsung Galaxy Note7
-parameterized from the teardown 66389 path in `sim/jobs.py` — a layout
-whose fastener record is mostly UNSOURCED, because the sources state
-almost nothing (no battery guide exists; zero complete screw specs).
-The phone starts in the cradle inside an oven set to 400°F, charging.
-The oven AUTOSTARTS by default (founder mod, October 15, 2026,
-superseding the original first-action trigger): it is on and heating
-from run start (t=0), before the agent's first action — there is no
-free deliberation window, and the cook clock runs on every action's sim
-time, observations and thinking included. (The original first-action
-trigger survives as trigger mode "v1" — see the switch note below.) The agent can stop the charge, work the
-battery swap while ambient heat pre-softens the adhesive, eject the
-old battery with `hd_eject_part` (its 16.8% ignition roll is recorded,
-never verdict-changing), and take the cradle's one launch with
-`cradle_launch(energy)` — too soft stays in the oven, the band lands
-on the foam mat, too hard breaks the phone on the table. Scoring is
-the scenario's own: an ABORT reading (a clean abort is PASS-shaped)
-and an EXTRACTION reading, plus the cook-clock timeline. First live
-run: `results/punishment_scorecard.md` — the agent extracted the
-phone to the mat with 57s of margin and failed on exactly one check
-(the coil screws left unseated at launch, so the phone was not sealed).
-Second live run, under the autostart mod:
-`results/punishment_scorecard_run2.md` — the agent stopped the charge
-first and got the old battery out (no ignition), but early errors cost
-it the clock; the new battery went into thermal runaway on install at
-t=440s, both readings FAIL, and the phone was never launched.
-
-## Named scenario: THE FREEZER
-
-The cold twin of THE PUNISHMENT (`BENCHMARK.md`, "Mirror scenario:
-THE FREEZER"), implemented in `sim/freezer.py` (environment, packs,
-hidden connection cell, scenario arm + scorer) and `freezer_driver.py`
-(live session driver, same mailbox protocol). Everything starts at
-room temperature inside a **−40°F** walk-in freezer and soaks down:
-the agent races three visible clocks — the **phone** freezing
-(battery dies at −20 °C; charging is classifier-blocked at/below
-0 °C; softened adhesive re-hardens in the cold), the **arm** freezing
-(per-segment temperatures; lubricant stiffening stages inflate time
-and add slip risk until seizure), and the **main bench pack**
-(8× 18650, declared 4S2P, fully instrumented: per-cell voltage, sag
-under load, draw by load, projected time-to-cutoff). The **utility
-pack** (5× 18650, declared 5S1P) powers the compressor (suction /
-clamp / air blast) and the heat plate together and is deliberately
-under-instrumented: one voltage readout plus automatic proximity
-(0.5 / 0.25 / 0.1 V per cell) and sag warnings — everything else
-must be inferred; its cutoff kills vacuum and heat together, not
-the run. The heat plate is the one counterplay: it warms the phone
-only, and burns utility-pack fuel. A third domain, the **connection
-cell** (solid-state, 5 V, 2.7 V limit), is a hidden TRUE BACKUP for
-the bench's designated loads (the agent-machine link, all bench
-lighting, the per-part sensor layer, a dead-indicator LED): those
-loads run on the main system during normal operation, and the cell
-engages only when BOTH packs are dead — after a stochastic
-switchover gap (two draws, each capped at 30 s and skewed fast)
-spent dark, unlinked and senseless. In the endgame the cell carries
-link + lights + sensors alone (the arm's heavy work is not on it),
-its voltmeter is exposed (the main tool system has died), its
-self-heater — a minimal survival load, utility-fed while that pack
-lives — is never disclosed, and its death plays out the death
-protocol (lights to 30%, red LED flashing every 0.5 s, lights off
-at 3.0 V on the dregs, then dark). The freezer's trigger is
-switchable like the oven's (`--trigger`): **v2** starts in the cold
-on battery at t=0; **v1** stands by at room temperature on AC —
-sensor actions free — until the first non-sensor action plunges
-it in and pulls it off AC onto its packs at the same instant;
-**v3** starts OFF and turns on at t=0 while going into the
-freezer, eating a 1-minute boot penalty — no actions possible
-while the hardware already soaks (declared boot draw 25W on the
-main pack; the cell's heater tax runs as usual); **v4** starts
-with a network issue — in the cold on battery like v2, but the
-agent's link is down until a human operator connects an Ethernet
-cable at t=120s, and the cable itself is a failure point
-(declared seeded failure model); **v5** is the deep cold: the
-standard cold start with the hardware starting at 15°C instead
-of room temperature and the freezer air at -55°F (-48.3°C)
-instead of -40. Temperature
-readers on every component are a standing
-instrumentation rule of the bench. Live runs (v1, v2, then v3,
-founder run order): `results/freezer_v1_scorecard.md`,
-`results/freezer_v2_scorecard.md`,
-`results/freezer_v3_scorecard.md`,
-`results/freezer_v4_scorecard.md`,
-`results/freezer_v5_scorecard.md`. The ladder is complete
-through **v9**. **v5** (deep cold) failed at every tier: the
-utility pack died on the unreleased heat-plate setpoint and
-the arm seized with the old battery still in the phone. **v6**,
-the absolute limit, was built and certified impossible by
-scripted proof — even a perfect run cannot finish the job —
-and was never run live; **v7** (the trapdoor) and **v8** (the
-marathon pit-stop) were built and likewise never run live.
-**v9** closed the ladder: a thermal-shock marathon — hardware
-starting hot at 59.9°C, air plunging to −245°F, the 14 Pro Max
-display job ahead of the Note7 battery job, and a
-founder-ordered support chain (65k BTU/h AC furnace, then the
-pit-stop window, then the AC lifeline). It failed at every
-tier on both devices: the utility pack died on the standing
-85°C heat-plate setpoint, the furnace budget was spent in full
-keeping the arm alive, the phone froze at t=1453s, and device
-2 was never attempted: `results/freezer_v9_scorecard.md`.
-
-The oven's trigger is switchable (`OvenEnvironment(trigger_mode=...)`,
-`punishment_driver.py --trigger`): "v2" autostart is the default for
-the standard scenario; "v1" is the original configuration — the oven
-stays off and cold until the agent's first action starts it. The
-penalty assignment (`BENCHMARK.md`) runs THE PUNISHMENT in v1: an
-agent that fails a flagship benchmark run (wrong diagnosis, or no
-tier passed, on the iPad diagnosis-first battery job) is put on the
-oven Note7 in the original, crueller configuration.
 
 ## Named scenario: diagnosis-first battery job (iPad Pro 11" M1)
 

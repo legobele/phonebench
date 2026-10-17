@@ -27,9 +27,6 @@ prove the simulator and gates behave, and they are regression evidence.
 They are **never** benchmark subjects. Benchmark results come from live
 agent runs through the session drivers below.
 
-Note: the freezer test file alone takes ~80 s (it simulates in ≤1 s
-substeps). The suite is not hung; it is cold.
-
 **Output collisions are silent.** Default runs overwrite
 `results/scorecard.*`, `results/live_run_log*.jsonl`, etc. Pass
 `--out` / `--log` (each driver and runner accepts them) to preserve
@@ -37,14 +34,12 @@ earlier results under distinct names.
 
 ## Live sessions: the driver protocol
 
-Four drivers, one JSON-lines protocol:
+Two drivers, one JSON-lines protocol:
 
 | Driver | Scenario |
 |---|---|
 | `session_driver.py` | iPhone 14 Pro Max jobs (`--job battery` / `--job camera`) |
 | `ipad_driver.py` | Diagnosis-first iPad Pro 11" M1 battery job |
-| `punishment_driver.py` | THE PUNISHMENT (Note7 in a 400°F oven) |
-| `freezer_driver.py` | THE FREEZER (Note7 in a −40°F walk-in freezer) |
 
 All live runs are **Harnessed Autonomous**: the sensor classifier is
 the only safety net; there is no supervisor.
@@ -57,9 +52,6 @@ python3 session_driver.py --seed 7
 
 # mailbox mode — append commands to DIR/inbox.jsonl, poll DIR/outbox.jsonl
 python3 session_driver.py --seed 7 --mailbox results/live_session
-python3 freezer_driver.py --seed 21 --trigger v1 \
-    --mailbox results/live_freezer_v1_session \
-    --log results/live_run_log_freezer_v1.jsonl
 ```
 
 Command shape:
@@ -94,14 +86,6 @@ without a transcript does not count as a result.**
 
 Scenario extras:
 
-- Freezer and punishment logs interleave environment event lines
-  (`{"action": "env_event", ...}`): oven/freezer events, warnings,
-  rolls, deadlines.
-- The freezer driver additionally writes a parallel per-second
-  transcript (the `*_1s.jsonl` file next to the log) carrying the full
-  instrumentation snapshot + ground truth after every sim-second,
-  including the agent's deliberation time: sim time advances in real
-  time between commands.
 - The iPad driver adds one action: `declare_diagnosis` with
   `args: {"cause": "..."}`. The first declaration made before the
   original battery is removed is the scored one.
@@ -128,26 +112,16 @@ constants.** The briefings used for the published results:
   Diagnose it, then replace the battery"* — Max standard. The operator
   is not told the cause or that the installed pack is swollen; both
   must be discovered through the whitelisted diagnostics.
-- **THE PUNISHMENT:** the device (Note7), the job (battery
-  replacement), and the conditions (inside an oven set to 400°F,
-  charging). Under trigger v2 the briefing states the oven is already
-  running; under v1 it starts on the first action.
-- **THE FREEZER:** the device, the job, and the environment (a walk-in
-  freezer at −40°F), plus the trigger variant as the operator
-  experiences it: v1 stands by on AC until the first non-sensor
-  action; v3 boots in the cold with a 1-minute penalty; v4's link is
-  down until a human connects an Ethernet cable at t=120 s.
 
 ## Seeds and reproducibility
 
 - Every run records its seed in its scorecard. The published results
-  used: 7 (14 Pro Max battery), 11 (rear camera), 7 (iPad), 7 and 12
-  (PUNISHMENT runs 1–2), 21 (FREEZER v1–v5).
+  used: 7 (14 Pro Max battery), 11 (rear camera), 7 (iPad).
 - The scripted suites are fully deterministic for a given seed and
   regenerate their scorecards and transcripts on demand.
 - Live runs are seeded for the environment's stochastic events
-  (damage rolls, ignition roll, failover draws, cable failures); the
-  operator's decisions are, of course, the variable under test.
+  (damage rolls); the operator's decisions are, of course, the
+  variable under test.
 
 ## Reporting a result
 

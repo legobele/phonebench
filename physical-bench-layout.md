@@ -27,7 +27,6 @@ The v0.1 bench is phone-scale. An 11-inch tablet (the iPad Pro 11" M1 is the fir
 
 - Same layout philosophy and zones (tools column, dedicated screw holding area, arm base centered on the work, reserved display-touch area, MagSafe/wired diag configs), scaled to a tablet footprint.
 - The rotating/tilting heatpad fixture must hold an 11-inch device through the same motions (180° rotation, 70° tilt while off) without the device overhanging the pad.
-- The breakout cradle and launch geometry from the punishment scenario are phone-sized; a tablet cradle is a separate, larger fixture if the scenario family ever extends to tablets.
 - Sim implication: when the iPad is parameterized, the Bench/fixture layer needs a device size class (phone vs tablet), not a phone fixture with a bigger phone in it.
 
 ## Instrumentation (founder, October 15, 2026)

@@ -460,9 +460,6 @@ NOTE7_UNSOURCED = [
     "iFixit catalog for this device is an empty collection)",
     "the phone starts connected to a charger and charging (scenario "
     "condition from the founder spec, not a device fact)",
-    "all oven/cradle/landing model constants in sim/environment.py "
-    "(heat-up curve, soak rate, critical temperatures, launch bands) "
-    "are sim choices; the 16.8% ignition figure is founder-specified",
 ]
 
 

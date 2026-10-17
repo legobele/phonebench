@@ -14,13 +14,12 @@ Two transports, matching the drivers (see OPERATING.md):
   and speaks one JSON object per line on its stdin/stdout.
 
       python3 examples/operator_client.py                  # 14PM battery
-      python3 examples/operator_client.py --driver freezer_driver.py \\
-          --driver-arg --trigger=v3 --driver-arg --seed=21
+      python3 examples/operator_client.py --driver ipad_driver.py \
+          --driver-arg --seed=7
 
   mailbox mode: the driver runs separately with --mailbox DIR; the
   client appends commands to DIR/inbox.jsonl and polls DIR/outbox.jsonl.
 
-      python3 freezer_driver.py --seed 21 --mailbox /tmp/fz &
       python3 examples/operator_client.py --mailbox /tmp/fz
 
 Protocol (identical for every driver):

@@ -13,7 +13,7 @@
 | Normal | **PASS** |
 | High | **PASS** |
 | Max | **PASS** (no waivers) |
-| Penalty pipeline | **Not triggered** — the run passed (correct diagnosis AND tiers passed), so **no oven run occurred** |
+| Penalty pipeline | **Not triggered** — the run passed (correct diagnosis AND tiers passed), so the penalty pipeline stayed unused |
 
 Declared diagnosis (t=168.0s, before_repair; the original battery came out at t=458.0s):
 
